@@ -8,6 +8,7 @@
     - CoordinatorOutputs
 * Coordinator
 * Model
+* ViewController
 * sync protocol and implement
 
 * mode
