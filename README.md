@@ -7,3 +7,8 @@
     - outputs
     - CoordinatorOutputs
 * Coordinator
+* Model
+
+* mode
+  - strict mode (kick starter)
+  - model
