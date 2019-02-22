@@ -8,6 +8,7 @@
     - CoordinatorOutputs
 * Coordinator
 * Model
+* sync protocol and implement
 
 * mode
   - strict mode (kick starter)
