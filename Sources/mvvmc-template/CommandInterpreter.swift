@@ -7,11 +7,7 @@
 
 import Foundation
 
-extension CommandInterpreter {
-    enum Command {
-        case generate(name: String)
-    }
-    
+extension CommandInterpreter {    
     enum InterpretError {
         case commandMissing
         case argumentMissing(message: String)

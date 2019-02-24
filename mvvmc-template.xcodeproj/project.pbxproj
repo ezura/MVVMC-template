@@ -26,6 +26,14 @@
 		FFA4F1D42221395B0012F069 /* CommandParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1D32221395B0012F069 /* CommandParser.swift */; };
 		FFA4F1D7222139C70012F069 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1D6222139C70012F069 /* Result.swift */; };
 		FFA4F1D922225D770012F069 /* CommandInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1D822225D770012F069 /* CommandInterpreter.swift */; };
+		FFA4F1DB22226B7E0012F069 /* Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1DA22226B7E0012F069 /* Execute.swift */; };
+		FFA4F1DD22226C0C0012F069 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1DC22226C0C0012F069 /* Command.swift */; };
+		FFA4F1E0222270710012F069 /* ViewModelTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1DF222270710012F069 /* ViewModelTemplate.swift */; };
+		FFA4F1E2222271F40012F069 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1E1222271F40012F069 /* Template.swift */; };
+		FFA4F1E42222724B0012F069 /* CoordinatorTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1E32222724B0012F069 /* CoordinatorTemplate.swift */; };
+		FFA4F1E6222272C90012F069 /* CoordinatorTestsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1E5222272C90012F069 /* CoordinatorTestsTemplate.swift */; };
+		FFA4F1E8222279620012F069 /* ViewControllerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1E7222279620012F069 /* ViewControllerTemplate.swift */; };
+		FFA4F1EA22227E3E0012F069 /* ModelTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1E922227E3E0012F069 /* ModelTemplate.swift */; };
 		OBJ_22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* XCTestManifests.swift */; };
@@ -55,6 +63,14 @@
 		FFA4F1D32221395B0012F069 /* CommandParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandParser.swift; sourceTree = "<group>"; };
 		FFA4F1D6222139C70012F069 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		FFA4F1D822225D770012F069 /* CommandInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandInterpreter.swift; sourceTree = "<group>"; };
+		FFA4F1DA22226B7E0012F069 /* Execute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execute.swift; sourceTree = "<group>"; };
+		FFA4F1DC22226C0C0012F069 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		FFA4F1DF222270710012F069 /* ViewModelTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTemplate.swift; sourceTree = "<group>"; };
+		FFA4F1E1222271F40012F069 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		FFA4F1E32222724B0012F069 /* CoordinatorTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTemplate.swift; sourceTree = "<group>"; };
+		FFA4F1E5222272C90012F069 /* CoordinatorTestsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTestsTemplate.swift; sourceTree = "<group>"; };
+		FFA4F1E7222279620012F069 /* ViewControllerTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTemplate.swift; sourceTree = "<group>"; };
+		FFA4F1E922227E3E0012F069 /* ModelTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTemplate.swift; sourceTree = "<group>"; };
 		OBJ_12 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* mvvmc_templateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmc_templateTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -88,6 +104,19 @@
 				FFA4F1D6222139C70012F069 /* Result.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		FFA4F1DE2222705C0012F069 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				FFA4F1E1222271F40012F069 /* Template.swift */,
+				FFA4F1E32222724B0012F069 /* CoordinatorTemplate.swift */,
+				FFA4F1E5222272C90012F069 /* CoordinatorTestsTemplate.swift */,
+				FFA4F1E7222279620012F069 /* ViewControllerTemplate.swift */,
+				FFA4F1DF222270710012F069 /* ViewModelTemplate.swift */,
+				FFA4F1E922227E3E0012F069 /* ModelTemplate.swift */,
+			);
+			path = Template;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Tests */ = {
@@ -140,8 +169,11 @@
 			children = (
 				OBJ_9 /* main.swift */,
 				FFA4F1CF222137B30012F069 /* Usage.swift */,
+				FFA4F1DC22226C0C0012F069 /* Command.swift */,
 				FFA4F1D32221395B0012F069 /* CommandParser.swift */,
 				FFA4F1D822225D770012F069 /* CommandInterpreter.swift */,
+				FFA4F1DA22226B7E0012F069 /* Execute.swift */,
+				FFA4F1DE2222705C0012F069 /* Template */,
 				FFA4F1D5222139B50012F069 /* Util */,
 			);
 			name = "mvvmc-template";
@@ -234,9 +266,17 @@
 				FFA4F1D2222137DF0012F069 /* CommandLine.swift in Sources */,
 				FFA4F1D7222139C70012F069 /* Result.swift in Sources */,
 				FFA4F1D922225D770012F069 /* CommandInterpreter.swift in Sources */,
+				FFA4F1DB22226B7E0012F069 /* Execute.swift in Sources */,
+				FFA4F1E8222279620012F069 /* ViewControllerTemplate.swift in Sources */,
 				OBJ_22 /* main.swift in Sources */,
+				FFA4F1E2222271F40012F069 /* Template.swift in Sources */,
+				FFA4F1E0222270710012F069 /* ViewModelTemplate.swift in Sources */,
+				FFA4F1E42222724B0012F069 /* CoordinatorTemplate.swift in Sources */,
+				FFA4F1E6222272C90012F069 /* CoordinatorTestsTemplate.swift in Sources */,
 				FFA4F1D42221395B0012F069 /* CommandParser.swift in Sources */,
+				FFA4F1EA22227E3E0012F069 /* ModelTemplate.swift in Sources */,
 				FFA4F1D0222137B30012F069 /* Usage.swift in Sources */,
+				FFA4F1DD22226C0C0012F069 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

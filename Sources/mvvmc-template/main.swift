@@ -9,3 +9,5 @@ case .success(let syntaxParsed):
 case .failure(let error):
     print(error)
 }
+
+print(Template.coordinatorTemplate("Profile"))
