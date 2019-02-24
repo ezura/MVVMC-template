@@ -1,16 +1,17 @@
-# template-generator-MVVMC
+# generator MVVMC template
 
-* ViewModel
-  - protocol
+* [ ] ViewModel
+  - [ ] protocol
     - ~ViewModeling
     - inputs
     - outputs
     - CoordinatorOutputs
-* Coordinator
-* Model
-* ViewController
-* sync protocol and implement
+* [ ] Coordinator
+* [ ] CoordinatorTests
+* [ ] Model
+* [ ] ViewController
+* [ ] sync protocol and implement
 
 * mode
-  - strict mode (kick starter)
-  - model
+  - [ ] strict mode (kickstarter)
+  - [ ] no model
