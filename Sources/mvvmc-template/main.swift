@@ -1,13 +1,17 @@
-dump(CommandLine.arguments)
-let syntaxParsedResult = CommandParser(args: CommandLine.arguments).parse()
-dump(syntaxParsedResult)
-
-switch syntaxParsedResult {
-case .success(let syntaxParsed):
-    let semantic = CommandInterpreter().interpret(input: syntaxParsed)
-    dump(semantic)
-case .failure(let error):
+do {
+    let syntaxParsedResult = CommandParser(args: CommandLine.arguments).parse()
+    switch syntaxParsedResult {
+    case .success(let syntaxParsed):
+        let semaParsed = CommandInterpreter().interpret(input: syntaxParsed)
+        switch semaParsed {
+        case .success(let command):
+            try execute(command: command)
+        case .failure(let error):
+            print(error)
+        }
+    case .failure(let error):
+        print(error)
+    }
+} catch {
     print(error)
 }
-
-print(Template.coordinatorTemplate("Profile"))
