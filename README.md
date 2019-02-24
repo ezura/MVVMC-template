@@ -1,6 +1,7 @@
 # generator MVVMC template
 
-## generate files
+## tasks
+### generate files
 * [x] ViewModel
   - [x] protocol
     - ~ViewModeling
@@ -12,11 +13,15 @@
 * [x] Model
 * [x] ViewController
 
-## mode
+### mode
 * [ ] strict mode (kickstarter)
 * [ ] no model
 
-## improve
+### improve feature
 * [ ] header template
 * [ ] customize template
 * [ ] sync protocol and implement
+* [ ] improve error message
+
+## Ref
+* [PackageBuilder](https://github.com/pixyzehn/PackageBuilder)
