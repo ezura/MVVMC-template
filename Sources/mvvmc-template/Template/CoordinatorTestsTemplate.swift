@@ -13,7 +13,7 @@ extension Template {
 import XCTest
 import UIKit
 import RxSwift
-@testable import <#your project name#>
+@testable import <#your module name#>
 
 final class \(name)CoordinatorTests: XCTestCase {
 
