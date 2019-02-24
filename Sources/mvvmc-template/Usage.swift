@@ -13,7 +13,7 @@ enum Usage {
         
         let usage =
         """
-        usage: \(executableName) [<options>] <command> [<args>]
+        usage: \(executableName) <command> [<options>] [<args>]
         
         generate [--no-model | -nm] <name>:
             generate `<name>ViewModel`, `<name>ViewCoordinator`, `<name>Model`.
