@@ -8,19 +8,14 @@
 import Foundation
 
 extension CommandParser {
-    enum Command {
-        case generate(name: String)
-    }
-    
     enum ParseError {
         case commandMissing
-        case argumentMissing(message: String)
     }
 }
 
-class CommandParser {
-    typealias ParseResult = Result<Command, ParseError>
-    typealias Input = (command: String, options: [String], args: [String])
+final class CommandParser {
+    typealias ParsedCommand = (command: String, options: [String], args: [String])
+    typealias ParseResult = Result<ParsedCommand, ParseError>
     
     private let wholeArgs: [String]
     private var itr: IndexingIterator<[String]>
@@ -39,7 +34,7 @@ class CommandParser {
         let options = consumeOptions()
         let args = consumeArgs()
         
-        return interpret(input: (command: command, options: options, args: args))
+        return .success((command: command, options: options, args: args))
     }
     
     private func consumeOptions() -> [String] {
@@ -49,17 +44,5 @@ class CommandParser {
     
     private func consumeArgs() -> [String] {
         return itr.map { $0 } // The rest all are args
-    }
-    
-    private func interpret(input: Input) -> ParseResult {
-        switch input.command {
-        case "generate":
-            guard let name = input.args.first else {
-                return .failure(.argumentMissing(message: "need name"))
-            }
-            return .success(.generate(name: name))
-        default:
-            return .failure(.commandMissing)
-        }
     }
 }

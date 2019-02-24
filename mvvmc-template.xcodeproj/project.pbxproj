@@ -25,6 +25,7 @@
 		FFA4F1D2222137DF0012F069 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1D1222137DF0012F069 /* CommandLine.swift */; };
 		FFA4F1D42221395B0012F069 /* CommandParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1D32221395B0012F069 /* CommandParser.swift */; };
 		FFA4F1D7222139C70012F069 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1D6222139C70012F069 /* Result.swift */; };
+		FFA4F1D922225D770012F069 /* CommandInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1D822225D770012F069 /* CommandInterpreter.swift */; };
 		OBJ_22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* XCTestManifests.swift */; };
@@ -53,6 +54,7 @@
 		FFA4F1D1222137DF0012F069 /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
 		FFA4F1D32221395B0012F069 /* CommandParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandParser.swift; sourceTree = "<group>"; };
 		FFA4F1D6222139C70012F069 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FFA4F1D822225D770012F069 /* CommandInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandInterpreter.swift; sourceTree = "<group>"; };
 		OBJ_12 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* mvvmc_templateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmc_templateTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				OBJ_9 /* main.swift */,
 				FFA4F1CF222137B30012F069 /* Usage.swift */,
 				FFA4F1D32221395B0012F069 /* CommandParser.swift */,
+				FFA4F1D822225D770012F069 /* CommandInterpreter.swift */,
 				FFA4F1D5222139B50012F069 /* Util */,
 			);
 			name = "mvvmc-template";
@@ -230,6 +233,7 @@
 			files = (
 				FFA4F1D2222137DF0012F069 /* CommandLine.swift in Sources */,
 				FFA4F1D7222139C70012F069 /* Result.swift in Sources */,
+				FFA4F1D922225D770012F069 /* CommandInterpreter.swift in Sources */,
 				OBJ_22 /* main.swift in Sources */,
 				FFA4F1D42221395B0012F069 /* CommandParser.swift in Sources */,
 				FFA4F1D0222137B30012F069 /* Usage.swift in Sources */,
