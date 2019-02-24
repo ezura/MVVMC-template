@@ -23,6 +23,8 @@
 /* Begin PBXBuildFile section */
 		FFA4F1D0222137B30012F069 /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1CF222137B30012F069 /* Usage.swift */; };
 		FFA4F1D2222137DF0012F069 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1D1222137DF0012F069 /* CommandLine.swift */; };
+		FFA4F1D42221395B0012F069 /* CommandParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1D32221395B0012F069 /* CommandParser.swift */; };
+		FFA4F1D7222139C70012F069 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA4F1D6222139C70012F069 /* Result.swift */; };
 		OBJ_22 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_40 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* XCTestManifests.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		FFA4F1CF222137B30012F069 /* Usage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usage.swift; sourceTree = "<group>"; };
 		FFA4F1D1222137DF0012F069 /* CommandLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
+		FFA4F1D32221395B0012F069 /* CommandParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandParser.swift; sourceTree = "<group>"; };
+		FFA4F1D6222139C70012F069 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		OBJ_12 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* mvvmc_templateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmc_templateTests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -75,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FFA4F1D5222139B50012F069 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FFA4F1D1222137DF0012F069 /* CommandLine.swift */,
+				FFA4F1D6222139C70012F069 /* Result.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +115,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -110,7 +123,6 @@
 				OBJ_10 /* Tests */,
 				OBJ_14 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -126,7 +138,8 @@
 			children = (
 				OBJ_9 /* main.swift */,
 				FFA4F1CF222137B30012F069 /* Usage.swift */,
-				FFA4F1D1222137DF0012F069 /* CommandLine.swift */,
+				FFA4F1D32221395B0012F069 /* CommandParser.swift */,
+				FFA4F1D5222139B50012F069 /* Util */,
 			);
 			name = "mvvmc-template";
 			path = "Sources/mvvmc-template";
@@ -197,7 +210,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -216,7 +229,9 @@
 			buildActionMask = 0;
 			files = (
 				FFA4F1D2222137DF0012F069 /* CommandLine.swift in Sources */,
+				FFA4F1D7222139C70012F069 /* Result.swift in Sources */,
 				OBJ_22 /* main.swift in Sources */,
+				FFA4F1D42221395B0012F069 /* CommandParser.swift in Sources */,
 				FFA4F1D0222137B30012F069 /* Usage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
