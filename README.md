@@ -1,5 +1,14 @@
 # generator MVVMC template
 
+## Installation
+### Makefile
+
+```shell
+$ git clone git@github.com:ezura/MVVMC-template.gitInstallation
+$ cd MVVMC-template
+$ make
+```
+
 ## tasks
 ### generate files
 * [x] ViewModel
