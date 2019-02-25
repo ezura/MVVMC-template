@@ -20,7 +20,7 @@ final class \(name)Coordinator: Coordinator<<#ResultType#>> {
         <#initialize#>
     }
 
-    override func start() -> Observable<ResultType> {
+    override func start() -> Observable<CoordinationResult> {
         return <#Observable#>
     }
 }
