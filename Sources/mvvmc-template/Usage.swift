@@ -14,16 +14,6 @@ enum Usage {
         let usage =
         """
         usage: \(executableName) <command> [<options>] [<args>]
-        
-        generate [--no-model | -nm] <name>:
-            generate `<name>ViewModel`, `<name>ViewCoordinator`, `<name>Model`.
-        
-            If you want files for a profile screen, run `\(executableName) generate Profile`.
-            Then, generate `ProfileViewModel`, `ProfileModel`, `ProfileViewCoordinator`.
-        
-            If model is unnecessary,
-            run `\(executableName) generate --no-model Profile` or
-            run `\(executableName) generate -nm Profile`
         """
         
         CommandLine.print(usage)
