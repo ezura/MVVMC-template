@@ -1,4 +1,18 @@
-# generator MVVMC template
+# MVVMC-template
+
+generate MVVMC template.
+
+## generated files
+* Coordinator
+* CoordinatorTests
+* Model
+* ViewController
+* ViewModel
+  - protocol
+    - ~ViewModeling
+    - inputs
+    - outputs
+    - CoordinatorOutputs
 
 ## Installation
 ### Makefile
