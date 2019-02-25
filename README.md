@@ -9,6 +9,12 @@ $ cd MVVMC-template
 $ make
 ```
 
+## Usage
+
+```
+$ mvvmc-template generate {Name}
+```
+
 ## tasks
 ### generate files
 * [x] ViewModel
