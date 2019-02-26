@@ -15,37 +15,37 @@ import Result
 import RxCocoa
 import RxSwift
 
-protocol \(name)Inputs {
+protocol \(name)ViewModelInputs {
 }
 
-protocol \(name)Outputs {
+protocol \(name)ViewModelOutputs {
 }
 
-protocol \(name)CoordinatorOutputs {
+protocol \(name)ViewModelCoordinatorOutputs {
 }
 
 protocol \(name)ViewModeling {
-    var inputs: \(name)Inputs { get }
-    var outputs: \(name)Outputs { get }
+    var inputs: \(name)ViewModelInputs { get }
+    var outputs: \(name)ViewModelOutputs { get }
     var coordinatorOutputs: \(name)CoordinatorOutputs { get }
 }
 
-final class \(name): \(name)Inputs, \(name)Outputs, \(name)CoordinatorOutputs, \(name)ViewModeling {
+final class \(name): \(name)ViewModelInputs, \(name)ViewModelOutputs, \(name)CoordinatorOutputs, \(name)ViewModeling {
 
-    var inputs: \(name)Inputs { return self }
-    var outputs: \(name)Outputs { return self }
+    var inputs: \(name)ViewModelInputs { return self }
+    var outputs: \(name)ViewModelOutputs { return self }
     var coordinatorOutputs: \(name)CoordinatorOutputs { return self }
 
-    // MARK: - \(name)Inputs
+    // MARK: - \(name)ViewModelInputs
 
-    // MARK: - \(name)Outputs
+    // MARK: - \(name)ViewModelOutputs
 
     // MARK: - \(name)CoordinatorOutputs
 
     // MARK: -
 
     struct Dependency {
-        let model: \(name)Model
+        let model: \(name)Modeling
     }
 
     private let dependency: Dependency
