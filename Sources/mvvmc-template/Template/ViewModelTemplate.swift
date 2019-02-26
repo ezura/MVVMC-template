@@ -24,7 +24,7 @@ protocol \(name)Outputs {
 protocol \(name)CoordinatorOutputs {
 }
 
-protocol \(name)ing {
+protocol \(name)ViewModeing {
     var inputs: \(name)Inputs { get }
     var outputs: \(name)Outputs { get }
     var coordinatorOutputs: \(name)CoordinatorOutputs { get }
