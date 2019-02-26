@@ -27,20 +27,20 @@ protocol \(name)ViewModelCoordinatorOutputs {
 protocol \(name)ViewModeling {
     var inputs: \(name)ViewModelInputs { get }
     var outputs: \(name)ViewModelOutputs { get }
-    var coordinatorOutputs: \(name)CoordinatorOutputs { get }
+    var coordinatorOutputs: \(name)ViewModelCoordinatorOutputs { get }
 }
 
-final class \(name): \(name)ViewModelInputs, \(name)ViewModelOutputs, \(name)CoordinatorOutputs, \(name)ViewModeling {
+final class \(name): \(name)ViewModelInputs, \(name)ViewModelOutputs, \(name)ViewModelCoordinatorOutputs, \(name)ViewModeling {
 
     var inputs: \(name)ViewModelInputs { return self }
     var outputs: \(name)ViewModelOutputs { return self }
-    var coordinatorOutputs: \(name)CoordinatorOutputs { return self }
+    var coordinatorOutputs: \(name)ViewModelCoordinatorOutputs { return self }
 
     // MARK: - \(name)ViewModelInputs
 
     // MARK: - \(name)ViewModelOutputs
 
-    // MARK: - \(name)CoordinatorOutputs
+    // MARK: - \(name)ViewModelCoordinatorOutputs
 
     // MARK: -
 
