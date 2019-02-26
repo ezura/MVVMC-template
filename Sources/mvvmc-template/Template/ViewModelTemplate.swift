@@ -24,13 +24,13 @@ protocol \(name)Outputs {
 protocol \(name)CoordinatorOutputs {
 }
 
-protocol \(name)ViewModeing {
+protocol \(name)ViewModeling {
     var inputs: \(name)Inputs { get }
     var outputs: \(name)Outputs { get }
     var coordinatorOutputs: \(name)CoordinatorOutputs { get }
 }
 
-final class \(name): \(name)Inputs, \(name)Outputs, \(name)CoordinatorOutputs, \(name)ViewModeing {
+final class \(name): \(name)Inputs, \(name)Outputs, \(name)CoordinatorOutputs, \(name)ViewModeling {
 
     var inputs: \(name)Inputs { return self }
     var outputs: \(name)Outputs { return self }
