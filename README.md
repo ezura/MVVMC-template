@@ -43,6 +43,7 @@ $ mvvmc-template generate {Name}
 * [x] ViewController
 
 ### mode
+* [ ] install as xcode template (ref: https://qiita.com/shu223/items/5d8a245e5743f77df9eb)
 * [ ] strict mode (kickstarter)
 * [ ] no model
 

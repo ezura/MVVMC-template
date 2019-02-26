@@ -9,4 +9,5 @@ import Foundation
 
 enum Command {
     case generate(name: String)
+    case install(name: String)
 }

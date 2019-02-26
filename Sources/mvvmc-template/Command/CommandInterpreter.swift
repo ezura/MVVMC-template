@@ -22,6 +22,8 @@ final class CommandInterpreter {
                 return .failure(.argumentMissing(message: "need name"))
             }
             return .success(.generate(name: name))
+        case "install":
+            return .success(.install(name: input.args.first ?? "MVVMC_Rx_template"))
         default:
             return .failure(.commandMissing)
         }
