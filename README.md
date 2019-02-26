@@ -18,7 +18,7 @@ generate MVVMC template.
 ### Makefile
 
 ```shell
-$ git clone git@github.com:ezura/MVVMC-template.gitInstallation
+$ git clone git@github.com:ezura/MVVMC-template.git
 $ cd MVVMC-template
 $ make
 ```
