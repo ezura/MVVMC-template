@@ -38,6 +38,7 @@ final class \(name)ViewController: UIViewController {
 
     }
 }
+\n
 """
     }
 }

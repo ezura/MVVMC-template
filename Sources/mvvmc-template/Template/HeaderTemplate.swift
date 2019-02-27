@@ -17,6 +17,7 @@ extension Template {
         //  Created by ___FULLUSERNAME___ on ___DATE___.
         //  ___COPYRIGHT___
         //
+        \n
         """
 
     static func headerTemplate(fileName: String, projectName: String, userName: String, date: String, copyright: String) -> String {

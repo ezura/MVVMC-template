@@ -31,6 +31,7 @@ final class \(name)CoordinatorTests: XCTestCase {
             .disposed(by: disposeBag)
     }
 }
+\n
 """
     }
 }

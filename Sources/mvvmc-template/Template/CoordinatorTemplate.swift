@@ -24,6 +24,7 @@ final class \(name)Coordinator: Coordinator<<#ResultType#>> {
         return <#Observable#>
     }
 }
+\n
 """
     }
 }
