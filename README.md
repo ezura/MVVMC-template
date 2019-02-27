@@ -44,7 +44,7 @@ $ mvvmc-template generate {Name}
 
 ### mode
 * [ ] strict mode (kickstarter)
-* [ ] generate as xcode template (ref: https://useyourloaf.com/blog/creating-custom-xcode-project-templates/)
+* [ ] generate and install as xcode template (ref: https://useyourloaf.com/blog/creating-custom-xcode-project-templates/)
 
 ### improve feature
 * [ ] header template
