@@ -30,7 +30,7 @@ protocol \(name)ViewModeling {
     var coordinatorOutputs: \(name)ViewModelCoordinatorOutputs { get }
 }
 
-final class \(name): \(name)ViewModelInputs, \(name)ViewModelOutputs, \(name)ViewModelCoordinatorOutputs, \(name)ViewModeling {
+final class \(name)ViewModel: \(name)ViewModelInputs, \(name)ViewModelOutputs, \(name)ViewModelCoordinatorOutputs, \(name)ViewModeling {
 
     var inputs: \(name)ViewModelInputs { return self }
     var outputs: \(name)ViewModelOutputs { return self }
