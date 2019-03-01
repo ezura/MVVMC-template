@@ -23,6 +23,12 @@ $ cd MVVMC-template
 $ make
 ```
 
+### [Mint](https://github.com/yonaskolb/mint)
+
+```shell
+$ mint install ezura/MVVMC-template
+```
+
 ## Usage
 
 ```
