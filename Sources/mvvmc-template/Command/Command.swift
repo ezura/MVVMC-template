@@ -8,5 +8,5 @@
 import Foundation
 
 enum Command {
-    case generate(name: String)
+    case generate(name: String, options: [Option])
 }

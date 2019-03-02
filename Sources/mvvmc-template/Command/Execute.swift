@@ -11,8 +11,11 @@ import ShellOut
 
 func execute(command: Command) throws {
     switch command {
-    case .generate(let name):
+    case .generate(let name, let options):
         let rootFolderName = name + "Set"
+
+        #warning("remove after debug")
+        return
         print("Creating ./\(rootFolderName)")
         let rootFolder = try FileSystem().createFolderIfNeeded(at: rootFolderName)
 
