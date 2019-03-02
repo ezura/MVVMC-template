@@ -68,7 +68,7 @@ $ mvvmc-template generate -C "{copyright}" {Name}
 * [ ] generate and install as xcode template (ref: https://useyourloaf.com/blog/creating-custom-xcode-project-templates/)
 
 ### improve feature
-* [ ] header template
+* [x] header template
 * [ ] customize template
 * [ ] sync protocol and implement
 * [ ] improve error message
