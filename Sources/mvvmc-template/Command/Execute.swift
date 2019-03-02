@@ -19,6 +19,9 @@ func execute(command: Command) throws {
 
         print("Creating ./\(workFolderName)")
         let workFolder = try rootFolder.createSubfolderIfNeeded(withName: workFolderName)
+        defer {
+            do { try shellOut(to: "open \(workFolder.path)") } catch { print(error) }
+        }
 
         if workFolder.containsSubfolder(named: mainFolderName) {
             print("Deleting old files: \(workFolderName)/\(mainFolderName)")
