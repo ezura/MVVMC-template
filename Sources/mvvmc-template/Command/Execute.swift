@@ -13,8 +13,6 @@ func execute(command: Command) throws {
     switch command {
     case .generate(let name, let options):
         let rootFolderName = name + "Set"
-        let copyright = options["--copyright"] ?? options["-C"] ?? ""
-        if copyright == nil { print("⚠️ value of copyright is missing") }
 
         #warning("remove after debug")
         return
@@ -43,7 +41,7 @@ func execute(command: Command) throws {
                                                      projectName: "",
                                                      userName: username,
                                                      date: date,
-                                                     copyright: copyright ?? "")
+                                                     copyright: "")
                 print("Creating \(folder.name)/\(name + $0)")
                 try folder.createFile(named: "\(name)\($0).swift",
                                       contents: headar + $1(name))

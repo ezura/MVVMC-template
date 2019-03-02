@@ -7,5 +7,5 @@
 
 import Foundation
 
-typealias Options = [String: String?]
-typealias ParsedCommand = (command: String, options: Options, args: [String])
+typealias Option = (String, String?)
+typealias ParsedCommand = (command: String, options: [Option], args: [String])
