@@ -36,24 +36,22 @@ final class CommandParser {
         return .success((command: command, options: options, args: args))
     }
     
-    private func consumeOptions() -> [Option] {
-        var optionsBuffer: [Option] = []
+    private func consumeOptions() -> Options {
+        var optionsBuffer: Options = [:]
         var tmpItr = itr
 
         while true {
-            guard let token = tmpItr.next(), token.hasPrefix("-") else {
+            guard let optionKind = tmpItr.next(), optionKind.hasPrefix("-") else {
                 return optionsBuffer
             }
-            let optionKind = token
-            itr = tmpItr
+            optionsBuffer[optionKind] = nil
+            itr = tmpItr // consume
 
-            if let token = tmpItr.next(), !token.hasPrefix("-") {
-                optionsBuffer.append((optionKind, token))
-                itr = tmpItr
-            } else {
-                optionsBuffer.append((optionKind, nil))
+            guard let optionValue = tmpItr.next(), !optionValue.hasPrefix("-") else {
                 continue
             }
+            optionsBuffer[optionKind] = optionValue
+            itr = tmpItr // consume
         }
     }
     
