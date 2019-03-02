@@ -55,7 +55,7 @@ final class \(name)ViewModel: \(name)ViewModelInputs, \(name)ViewModelOutputs, \
         self.dependency = dependency
     }
 }
-\n
+ 
 """
     }
 }

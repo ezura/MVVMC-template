@@ -28,7 +28,7 @@ final class \(name)Model: \(name)Modeling {
         self.dependency = dependency
     }
 }
-\n
+ 
 """
     }
 }
