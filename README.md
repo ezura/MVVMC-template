@@ -35,6 +35,14 @@ $ mint install ezura/MVVMC-template
 $ mvvmc-template generate {Name}
 ```
 
+If you want to set copyright, add option `--copyright "{copyright}"` or `-C "{copyright}"`.
+
+```
+$ mvvmc-template generate --copyright "{copyright}" {Name}
+// or
+$ mvvmc-template generate -C "{copyright}" {Name}
+```
+
 ## tasks
 ### generate files
 * [x] ViewModel

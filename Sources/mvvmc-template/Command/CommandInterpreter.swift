@@ -15,13 +15,13 @@ extension CommandInterpreter {
 }
 
 final class CommandInterpreter {
-    func interpret(input: CommandParser.ParsedCommand) -> Result<Command, InterpretError> {
+    func interpret(input: ParsedCommand) -> Result<Command, InterpretError> {
         switch input.command {
         case "generate":
             guard let name = input.args.first else {
                 return .failure(.argumentMissing(message: "need name"))
             }
-            return .success(.generate(name: name))
+            return .success(.generate(name: name, options: input.options))
         default:
             return .failure(.commandMissing)
         }

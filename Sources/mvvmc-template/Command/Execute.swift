@@ -11,19 +11,22 @@ import ShellOut
 
 func execute(command: Command) throws {
     switch command {
-    case .generate(let name):
-        let rootFolderName = name + "Set"
-        print("Creating ./\(rootFolderName)")
-        let rootFolder = try FileSystem().createFolderIfNeeded(at: rootFolderName)
-
+    case .generate(let name, let options):
+        let rootFolder = FileSystem().currentFolder
+        let workFolderName = name + "Set"
         let mainFolderName = name
-        if rootFolder.containsSubfolder(named: mainFolderName) {
-            print("Deleting old files: \(rootFolderName)/\(mainFolderName)")
-            try rootFolder.subfolder(named: mainFolderName).delete()
+        let copyright = options.first { $0.0 == "--copyright" || $0.0 == "-C" }?.1 ?? ""
+
+        print("Creating ./\(workFolderName)")
+        let workFolder = try rootFolder.createSubfolderIfNeeded(withName: workFolderName)
+
+        if workFolder.containsSubfolder(named: mainFolderName) {
+            print("Deleting old files: \(workFolderName)/\(mainFolderName)")
+            try workFolder.subfolder(named: mainFolderName).delete()
         }
 
-        print("Creating \(rootFolderName)/\(name)")
-        let folder = try rootFolder.createSubfolder(named: mainFolderName)
+        print("Creating \(workFolderName)/\(name)")
+        let folder = try workFolder.createSubfolder(named: mainFolderName)
 
         let username = try shellOut(to: "git config user.name")
         let date = try shellOut(to: "date \"+%Y/%m/%d\"")
@@ -38,20 +41,20 @@ func execute(command: Command) throws {
                                                      projectName: "",
                                                      userName: username,
                                                      date: date,
-                                                     copyright: "")
+                                                     copyright: copyright)
                 print("Creating \(folder.name)/\(name + $0)")
                 try folder.createFile(named: "\(name)\($0).swift",
                                       contents: headar + $1(name))
         }
 
-        print("Creating \(rootFolder.name)/\(name)CoordinatorTests")
+        print("Creating \(workFolder.name)/\(name)CoordinatorTests")
         // TODO: projectName and copyright
         let testFileHeadar = Template.headerTemplate(fileName:"\(name)CoordinatorTests.swift",
             projectName: "",
             userName: username,
             date: date,
             copyright: "")
-        try rootFolder.createFile(named: "\(name)CoordinatorTests.swift",
+        try workFolder.createFile(named: "\(name)CoordinatorTests.swift",
             contents: testFileHeadar + Template.coordinatorTestsTemplate(name))
     }
 }

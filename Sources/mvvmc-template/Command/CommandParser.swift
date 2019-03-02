@@ -14,7 +14,6 @@ extension CommandParser {
 }
 
 final class CommandParser {
-    typealias ParsedCommand = (command: String, options: [String], args: [String])
     typealias ParseResult = Result<ParsedCommand, ParseError>
     
     private let wholeArgs: [String]
@@ -37,9 +36,25 @@ final class CommandParser {
         return .success((command: command, options: options, args: args))
     }
     
-    private func consumeOptions() -> [String] {
-        // todo: implement
-        return []
+    private func consumeOptions() -> [Option] {
+        var optionsBuffer: [Option] = []
+        var tmpItr = itr
+
+        while true {
+            guard let token = tmpItr.next(), token.hasPrefix("-") else {
+                return optionsBuffer
+            }
+            let optionKind = token
+            itr = tmpItr
+
+            if let token = tmpItr.next(), !token.hasPrefix("-") {
+                optionsBuffer.append((optionKind, token))
+                itr = tmpItr
+            } else {
+                optionsBuffer.append((optionKind, nil))
+                continue
+            }
+        }
     }
     
     private func consumeArgs() -> [String] {
