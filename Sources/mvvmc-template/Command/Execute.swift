@@ -16,6 +16,7 @@ func execute(command: Command) throws {
         let workFolderName = name + "Set"
         let mainFolderName = name
         let copyright = options.first { $0.0 == "--copyright" || $0.0 == "-C" }?.1 ?? ""
+        let projectName = options.first { $0.0 == "--project_name" || $0.0 == "-P" }?.1 ?? ""
 
         print("Creating ./\(workFolderName)")
         let workFolder = try rootFolder.createSubfolderIfNeeded(withName: workFolderName)
@@ -41,7 +42,7 @@ func execute(command: Command) throws {
             .forEach {
                 // TODO: projectName and copyright
                 let headar = Template.headerTemplate(fileName: "\(name)\($0).swift",
-                                                     projectName: "",
+                                                     projectName: projectName,
                                                      userName: username,
                                                      date: date,
                                                      copyright: copyright)
