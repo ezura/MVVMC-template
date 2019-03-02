@@ -31,34 +31,29 @@ func execute(command: Command) throws {
 
         print("Creating \(workFolderName)/\(name)")
         let folder = try workFolder.createSubfolder(named: mainFolderName)
-
+        
         let username = try shellOut(to: "git config user.name")
         let date = try shellOut(to: "date \"+%Y/%m/%d\"")
-
+        let header: (_ name: String, _ suffix: String) -> String = {
+            return Template.headerTemplate(fileName: "\($0)\($1).swift",
+                projectName: projectName,
+                userName: username,
+                date: date,
+                copyright: copyright)
+        }
+        
         try [("Model", Template.modelTemplate),
              ("ViewController", Template.viewControllerTemplate),
              ("ViewModel", Template.viewModelTemplate),
              ("Coordinator", Template.coordinatorTemplate)]
             .forEach {
-                // TODO: projectName and copyright
-                let headar = Template.headerTemplate(fileName: "\(name)\($0).swift",
-                                                     projectName: projectName,
-                                                     userName: username,
-                                                     date: date,
-                                                     copyright: copyright)
                 print("Creating \(folder.name)/\(name + $0)")
                 try folder.createFile(named: "\(name)\($0).swift",
-                                      contents: headar + $1(name))
+                    contents: header(name, $0) + "\n" + $1(name))
         }
 
         print("Creating \(workFolder.name)/\(name)CoordinatorTests")
-        // TODO: projectName and copyright
-        let testFileHeadar = Template.headerTemplate(fileName:"\(name)CoordinatorTests.swift",
-            projectName: "",
-            userName: username,
-            date: date,
-            copyright: "")
         try workFolder.createFile(named: "\(name)CoordinatorTests.swift",
-            contents: testFileHeadar + Template.coordinatorTestsTemplate(name))
+            contents: header(name, "CoordinatorTests") + "\n" + Template.coordinatorTestsTemplate(name))
     }
 }

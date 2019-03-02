@@ -17,22 +17,23 @@ extension Template {
         //  Created by ___FULLUSERNAME___ on ___DATE___.
         //  ___COPYRIGHT___
         //
-        \n
         """
 
     static func headerTemplate(fileName: String, projectName: String, userName: String, date: String, copyright: String) -> String {
-        // TODO: projectName and copyright
+        let prefix = "//  "
         let header =
         """
-        //
-        //  \(fileName)
-        //  \(projectName)
-        //
-        //  Created by \(userName) on \(date).
-        //  \(copyright)
-        //
-        \n
+         
+        \(fileName) 
+        \(projectName) 
+         
+        Created by \(userName) on \(date).
+        \(copyright) 
+         
         """
+            .split(separator: "\n")
+            .map { prefix + $0 }
+            .joined(separator: "\n") + "\n"
         return header
     }
 }
