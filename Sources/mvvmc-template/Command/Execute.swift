@@ -13,9 +13,8 @@ func execute(command: Command) throws {
     switch command {
     case .generate(let name, let options):
         let rootFolderName = name + "Set"
+        let copyright = options.first { $0.0 == "--copyright" || $0.0 == "-C" }?.1 ?? ""
 
-        #warning("remove after debug")
-        return
         print("Creating ./\(rootFolderName)")
         let rootFolder = try FileSystem().createFolderIfNeeded(at: rootFolderName)
 
@@ -41,7 +40,7 @@ func execute(command: Command) throws {
                                                      projectName: "",
                                                      userName: username,
                                                      date: date,
-                                                     copyright: "")
+                                                     copyright: copyright)
                 print("Creating \(folder.name)/\(name + $0)")
                 try folder.createFile(named: "\(name)\($0).swift",
                                       contents: headar + $1(name))
