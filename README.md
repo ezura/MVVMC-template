@@ -35,7 +35,14 @@ $ mint install ezura/MVVMC-template
 $ mvvmc-template generate {Name}
 ```
 
-If you want to set copyright, add option `--copyright "{copyright}"` or `-C "{copyright}"`.
+### Options
+
+description | Option
+--- | ---
+Write copyright in header | `--copyright` or `-C`
+Write project name in header | `--project-name` or `-P`
+
+If you want to set copyright:
 
 ```
 $ mvvmc-template generate --copyright "{copyright}" {Name}

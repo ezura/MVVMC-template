@@ -64,7 +64,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "generate --copyright &quot;aaaaa&quot; arg"
+            argument = "generate -P &quot;Project name A&quot; -C &quot;&#xa9;&#xfe0e;Coprright&quot; OptionTest"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

@@ -455,10 +455,10 @@
       "OBJ_39" = {
          isa = "PBXGroup";
          children = (
-            "mvvmc-template::mvvmc-template::Product",
-            "ShellOut::ShellOut::Product",
             "Files::Files::Product",
-            "mvvmc-template::mvvmc-templateTests::Product"
+            "mvvmc-template::mvvmc-template::Product",
+            "mvvmc-template::mvvmc-templateTests::Product",
+            "ShellOut::ShellOut::Product"
          );
          name = "Products";
          path = "";
