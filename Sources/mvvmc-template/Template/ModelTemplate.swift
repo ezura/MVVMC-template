@@ -14,10 +14,28 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-protocol \(name)Modeling {
+protocol \(name)ModelInputs {
 }
 
-final class \(name)Model: \(name)Modeling {
+protocol \(name)ModelOutputs {
+}
+
+protocol \(name)Modeling {
+    var inputs: \(name)ModelInputs { get }
+    var outputs: \(name)ModelOutputs { get }
+}
+
+final class \(name)Model: \(name)Modeling, \(name)ModelInputs, \(name)ModelOutputs {
+
+    var inputs: \(name)ModelInputs { return self }
+    var outputs: \(name)ModelOutputs { return self }
+
+    // MARK: - \(name)ModelInputs
+
+    // MARK: - \(name)ModelOutputs
+
+    // MARK: -
+
     struct Dependency {
     }
 
