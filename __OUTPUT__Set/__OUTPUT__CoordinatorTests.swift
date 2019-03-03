@@ -1,21 +1,17 @@
-//
-//  CoordinatorTestsTemplate.swift
+//  
+//  __OUTPUT__CoordinatorTests.swift
 //  mvvmc-template
-//
-//  Created by yuka ezura on 2019/02/24.
-//
+//  
+//  Created by ezura on 2019/03/03.
+//  Copyright (c) Yuka Ezura 2019
+//  
 
-import Foundation
-
-extension Template {
-    static let coordinatorTestsTemplate: (String) -> String = { name in
-"""
 import XCTest
 import UIKit
 import RxSwift
 @testable import <#your module name#>
 
-final class \(name)CoordinatorTests: XCTestCase {
+final class __OUTPUT__CoordinatorTests: XCTestCase {
 
     private var disposeBag = DisposeBag()
 
@@ -25,13 +21,9 @@ final class \(name)CoordinatorTests: XCTestCase {
 
     func testResolveDependencyOnStart() {
         let navigator = UINavigationController()
-        let coordinator = \(name)Coordinator(<#args#>)
+        let coordinator = __OUTPUT__Coordinator(<#args#>)
         coordinator.start()
             .subscribe()
             .disposed(by: disposeBag)
-    }
-}
-
-"""
     }
 }

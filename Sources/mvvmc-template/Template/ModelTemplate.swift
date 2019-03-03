@@ -46,7 +46,7 @@ final class \(name)Model: \(name)Modeling, \(name)ModelInputs, \(name)ModelOutpu
         self.dependency = dependency
     }
 }
- 
+
 """
     }
 }
