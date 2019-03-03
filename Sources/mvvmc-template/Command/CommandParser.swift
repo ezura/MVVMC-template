@@ -27,16 +27,16 @@ final class CommandParser {
     func parse() -> ParseResult {
         _ = itr.next() // tool name
         
-        guard let command = consumeCommand() else {
+        guard let command = consumeTokenAsCommand() else {
             return Result.failure(.commandMissing)
         }
-        let options = consumeOptions()
-        let args = consumeArgs()
+        let options = consumeTokensAsOptions()
+        let args = consumeTokensAsArgs()
         
         return .success((command: command, options: options, args: args))
     }
     
-    private func consumeCommand() -> String? {
+    private func consumeTokenAsCommand() -> String? {
         var tmpItr = itr
         guard let token = tmpItr.next() else {
             return nil
@@ -52,7 +52,7 @@ final class CommandParser {
         return command
     }
     
-    private func consumeOptions() -> [Option] {
+    private func consumeTokensAsOptions() -> [Option] {
         var optionsBuffer: [Option] = []
         var tmpItr = itr
 
@@ -73,7 +73,7 @@ final class CommandParser {
         }
     }
     
-    private func consumeArgs() -> [String] {
+    private func consumeTokensAsArgs() -> [String] {
         return itr.map { $0 } // The rest all are args
     }
 }
