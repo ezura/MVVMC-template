@@ -23,17 +23,20 @@ extension Template {
         let prefix = "//  "
         let header =
         """
-         
-        \(fileName) 
-        \(projectName) 
-         
+        
+        \(fileName)
+        \(projectName)
+        
         Created by \(userName) on \(date).
-        \(copyright) 
-         
+        \(copyright)
+        
         """
-            .split(separator: "\n")
+            .split(separator: "\n", 
+                   maxSplits: Int.max,
+                   omittingEmptySubsequences: false)
             .map { prefix + $0 }
-            .joined(separator: "\n") + "\n"
+            .joined(separator: "\n")
+            .appending("\n")
         return header
     }
 }

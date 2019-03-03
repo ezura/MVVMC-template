@@ -17,14 +17,13 @@ import RxCocoa
 final class \(name)Coordinator: Coordinator<<#ResultType#>> {
 
     init() {
-        <#initialize#>
     }
 
     override func start() -> Observable<CoordinationResult> {
         return <#Observable#>
     }
 }
- 
+
 """
     }
 }
