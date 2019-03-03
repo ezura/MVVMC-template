@@ -14,6 +14,11 @@ enum Usage {
         let usage =
         """
         usage: \(executableName) <command> [<options>] [<args>]
+        
+        ## Options:
+        --copyright or -C: Write copyright in header
+        --project-name or -P: Write project name in header
+        
         """
         
         CommandLine.print(usage)

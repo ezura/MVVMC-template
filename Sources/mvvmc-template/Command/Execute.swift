@@ -11,6 +11,12 @@ import ShellOut
 
 func execute(command: Command) throws {
     switch command {
+    case .empty(options: let options):
+        if options.contains(where: { $0.0.contains("help") }) {
+            Usage.print()
+        } else {
+            print("command not found. If you read usage, please use `--help`")
+        }
     case .generate(let name, let options):
         let rootFolder = FileSystem().currentFolder
         let workFolderName = name + "Set"
