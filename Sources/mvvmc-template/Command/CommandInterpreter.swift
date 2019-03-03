@@ -17,6 +17,8 @@ extension CommandInterpreter {
 final class CommandInterpreter {
     func interpret(input: ParsedCommand) -> Result<Command, InterpretError> {
         switch input.command {
+        case "":
+            return .success(.empty(options: input.options))
         case "generate":
             guard let name = input.args.first else {
                 return .failure(.argumentMissing(message: "need name"))

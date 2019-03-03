@@ -27,13 +27,29 @@ final class CommandParser {
     func parse() -> ParseResult {
         _ = itr.next() // tool name
         
-        guard let command = itr.next() else {
+        guard let command = consumeCommand() else {
             return Result.failure(.commandMissing)
         }
         let options = consumeOptions()
         let args = consumeArgs()
         
         return .success((command: command, options: options, args: args))
+    }
+    
+    private func consumeCommand() -> String? {
+        var tmpItr = itr
+        guard let token = tmpItr.next() else {
+            return nil
+        }
+        let command: String
+        if token.hasPrefix("-") {
+            // handle this token as option parameter, so doesn't consume this token and analyze it as empty command.
+            command = ""
+        } else {
+            command = token
+            itr = tmpItr
+        }
+        return command
     }
     
     private func consumeOptions() -> [Option] {
