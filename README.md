@@ -40,7 +40,7 @@ $ mvvmc-template generate {Name}
 description | Option
 --- | ---
 Write copyright in header | `--copyright` or `-C`
-Write project name in header | `--project-name` or `-P`
+Write project name in header | `--project_name` or `-P`
 
 If you want to set copyright:
 
