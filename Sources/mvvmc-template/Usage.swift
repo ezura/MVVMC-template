@@ -17,7 +17,7 @@ enum Usage {
         
         ## Options:
         --copyright or -C: Write copyright in header
-        --project-name or -P: Write project name in header
+        --project_name or -P: Write project name in header
         
         """
         
