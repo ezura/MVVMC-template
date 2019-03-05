@@ -15,6 +15,12 @@ import Result
 import RxCocoa
 import RxSwift
 
+protocol \(name)ViewModeling {
+    var inputs: \(name)ViewModelInputs { get }
+    var outputs: \(name)ViewModelOutputs { get }
+    var coordinatorOutputs: \(name)ViewModelCoordinatorOutputs { get }
+}
+
 protocol \(name)ViewModelInputs {
 }
 
@@ -22,12 +28,6 @@ protocol \(name)ViewModelOutputs {
 }
 
 protocol \(name)ViewModelCoordinatorOutputs {
-}
-
-protocol \(name)ViewModeling {
-    var inputs: \(name)ViewModelInputs { get }
-    var outputs: \(name)ViewModelOutputs { get }
-    var coordinatorOutputs: \(name)ViewModelCoordinatorOutputs { get }
 }
 
 final class \(name)ViewModel: \(name)ViewModelInputs, \(name)ViewModelOutputs, \(name)ViewModelCoordinatorOutputs, \(name)ViewModeling {
