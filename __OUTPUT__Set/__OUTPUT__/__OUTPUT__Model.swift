@@ -2,7 +2,7 @@
 //  __OUTPUT__Model.swift
 //  mvvmc-template
 //  
-//  Created by ezura on 2019/03/03.
+//  Created by yuka.ezura on 2019/03/05.
 //  Copyright (c) Yuka Ezura 2019
 //  
 
@@ -10,15 +10,15 @@ import Foundation
 import RxCocoa
 import RxSwift
 
+protocol __OUTPUT__Modeling {
+    var inputs: __OUTPUT__ModelInputs { get }
+    var outputs: __OUTPUT__ModelOutputs { get }
+}
+
 protocol __OUTPUT__ModelInputs {
 }
 
 protocol __OUTPUT__ModelOutputs {
-}
-
-protocol __OUTPUT__Modeling {
-    var inputs: __OUTPUT__ModelInputs { get }
-    var outputs: __OUTPUT__ModelOutputs { get }
 }
 
 final class __OUTPUT__Model: __OUTPUT__Modeling, __OUTPUT__ModelInputs, __OUTPUT__ModelOutputs {

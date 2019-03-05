@@ -2,7 +2,7 @@
 //  __OUTPUT__ViewController.swift
 //  mvvmc-template
 //  
-//  Created by ezura on 2019/03/03.
+//  Created by yuka.ezura on 2019/03/05.
 //  Copyright (c) Yuka Ezura 2019
 //  
 

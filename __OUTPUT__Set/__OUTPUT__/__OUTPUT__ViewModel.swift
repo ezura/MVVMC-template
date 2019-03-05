@@ -2,7 +2,7 @@
 //  __OUTPUT__ViewModel.swift
 //  mvvmc-template
 //  
-//  Created by ezura on 2019/03/03.
+//  Created by yuka.ezura on 2019/03/05.
 //  Copyright (c) Yuka Ezura 2019
 //  
 
@@ -11,6 +11,12 @@ import Result
 import RxCocoa
 import RxSwift
 
+protocol __OUTPUT__ViewModeling {
+    var inputs: __OUTPUT__ViewModelInputs { get }
+    var outputs: __OUTPUT__ViewModelOutputs { get }
+    var coordinatorOutputs: __OUTPUT__ViewModelCoordinatorOutputs { get }
+}
+
 protocol __OUTPUT__ViewModelInputs {
 }
 
@@ -18,12 +24,6 @@ protocol __OUTPUT__ViewModelOutputs {
 }
 
 protocol __OUTPUT__ViewModelCoordinatorOutputs {
-}
-
-protocol __OUTPUT__ViewModeling {
-    var inputs: __OUTPUT__ViewModelInputs { get }
-    var outputs: __OUTPUT__ViewModelOutputs { get }
-    var coordinatorOutputs: __OUTPUT__ViewModelCoordinatorOutputs { get }
 }
 
 final class __OUTPUT__ViewModel: __OUTPUT__ViewModelInputs, __OUTPUT__ViewModelOutputs, __OUTPUT__ViewModelCoordinatorOutputs, __OUTPUT__ViewModeling {
