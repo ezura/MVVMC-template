@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "mvvmc-template",
+    products: [
+        .executable(name: "mvvmc-template", targets: ["mvvmc-template"])
+        ],
     dependencies: [
         .package(url: "https://github.com/JohnSundell/Files.git", from: "2.2.1"),
         .package(url: "https://github.com/JohnSundell/ShellOut.git", .branch("master"))
