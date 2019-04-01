@@ -29,19 +29,31 @@ class ImplementWriter: SyntaxRewriter {
         let sourceFile = try! SyntaxTreeParser.parse(fileURL)
         let visitor = ProtocolVisitor { node in
             if node.identifier.text.hasSuffix("Input") {
-                // TODO: 
+                print("// \(node.identifier.text)")
+                node.extractVariableDecl().forEach { (pattern, typeAnnotation) in
+                    print("let \(pattern.identifier): \(typeAnnotation.type)") // TODO: append initializer
+                }
+                print()
             } else if  node.identifier.text.hasSuffix("Output") {
                 print("// \(node.identifier.text)")
-                node.members.members.forEach { declMember in
-                    guard let varDecl = declMember.decl as? VariableDeclSyntax else { return }
-                    guard let binding = varDecl.bindings.first(where: { $0.pattern is IdentifierPatternSyntax }),
-                    let pattern = binding.pattern as? IdentifierPatternSyntax,
-                    let typeAnnotation = binding.typeAnnotation else { return }
-                    print("let", pattern.identifier, typeAnnotation.type)
+                node.extractVariableDecl().forEach { (pattern, typeAnnotation) in
+                    print("let \(pattern.identifier): \(typeAnnotation.type)")
                 }
                 print()
             }
         }
         sourceFile.walk(visitor)
+    }
+}
+
+private extension ProtocolDeclSyntax {
+    func extractVariableDecl() -> [(IdentifierPatternSyntax, TypeAnnotationSyntax)] {
+        return self.members.members.compactMap { declMember in
+            guard let varDecl = declMember.decl as? VariableDeclSyntax,
+                let binding = varDecl.bindings.first(where: { $0.pattern is IdentifierPatternSyntax }),
+                let pattern = binding.pattern as? IdentifierPatternSyntax,
+                let typeAnnotation = binding.typeAnnotation else { return nil }
+            return (pattern, typeAnnotation)
+        }
     }
 }
