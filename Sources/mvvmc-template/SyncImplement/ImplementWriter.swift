@@ -10,35 +10,38 @@ import SwiftSyntax
 
 extension ImplementWriter {
     class ProtocolVisitor: SyntaxVisitor {
-        struct VisitResult {
-            var inputs: [ProtocolDeclSyntax]
-            var outputs: [ProtocolDeclSyntax]
+        var onFind: (ProtocolDeclSyntax) -> Void
+        
+        init(onFind: @escaping (ProtocolDeclSyntax) -> Void) {
+            self.onFind = onFind
         }
         
-        private(set) var visitResult: VisitResult?
-        
         override func visit(_ node: ProtocolDeclSyntax) -> SyntaxVisitorContinueKind {
-            if node.identifier.text.hasSuffix("Input") {
-                visitResult?.inputs.append(node)
-                return .skipChildren
-            } else if  node.identifier.text.hasSuffix("Output") {
-                visitResult?.outputs.append(node)
-                return .skipChildren
-            } else {
-                return .skipChildren
-            }
+            onFind(node)
+            return .skipChildren
         }
     }
 }
 
 class ImplementWriter: SyntaxRewriter {
     
-    private var inputProtocolTree: Syntax?
-    
-    func scan(filePath: String) {
-        let url = URL(fileURLWithPath: "../Example/interface.swift")
-        let sourceFile = try! SyntaxTreeParser.parse(url)
-        let visitor = ProtocolVisitor()
+    func printImplementation(fileURL: URL) {
+        let sourceFile = try! SyntaxTreeParser.parse(fileURL)
+        let visitor = ProtocolVisitor { node in
+            if node.identifier.text.hasSuffix("Input") {
+                // TODO: 
+            } else if  node.identifier.text.hasSuffix("Output") {
+                print("// \(node.identifier.text)")
+                node.members.members.forEach { declMember in
+                    guard let varDecl = declMember.decl as? VariableDeclSyntax else { return }
+                    guard let binding = varDecl.bindings.first(where: { $0.pattern is IdentifierPatternSyntax }),
+                    let pattern = binding.pattern as? IdentifierPatternSyntax,
+                    let typeAnnotation = binding.typeAnnotation else { return }
+                    print("let", pattern.identifier, typeAnnotation.type)
+                }
+                print()
+            }
+        }
         sourceFile.walk(visitor)
     }
 }

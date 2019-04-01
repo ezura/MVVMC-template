@@ -28,7 +28,7 @@ final class CommandInterpreter {
             guard let filePath = input.args.first else {
                 return .failure(.argumentMissing(message: "need file URL"))
             }
-            return .success(.writeImplement(filePath: filePath))
+            return .success(.printImplement(filePath: filePath))
         default:
             return .failure(.commandMissing)
         }
