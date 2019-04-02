@@ -28,14 +28,14 @@ class ImplementWriter: SyntaxRewriter {
     func printImplementation(fileURL: URL) {
         let sourceFile = try! SyntaxTreeParser.parse(fileURL)
         let visitor = ProtocolVisitor { node in
-            if node.identifier.text.hasSuffix("Input") {
-                print("// \(node.identifier.text)")
+            if node.identifier.text.hasSuffix("Inputs") {
+                print("// MARK: - \(node.identifier.text)")
                 node.extractVariableDecl().forEach { (pattern, typeAnnotation) in
                     print("let \(pattern.identifier): \(typeAnnotation.type)") // TODO: append initializer
                 }
                 print()
-            } else if  node.identifier.text.hasSuffix("Output") {
-                print("// \(node.identifier.text)")
+            } else if  node.identifier.text.hasSuffix("Outputs") {
+                print("// MARK: - \(node.identifier.text)")
                 node.extractVariableDecl().forEach { (pattern, typeAnnotation) in
                     print("let \(pattern.identifier): \(typeAnnotation.type)")
                 }
