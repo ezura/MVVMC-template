@@ -24,7 +24,7 @@ final class CommandInterpreter {
                 return .failure(.argumentMissing(message: "need name"))
             }
             return .success(.generate(name: name, options: input.options))
-        case "implement":
+        case "sync-implement", "sync-impl":
             guard let filePath = input.args.first else {
                 return .failure(.argumentMissing(message: "need file URL"))
             }
