@@ -15,9 +15,15 @@ enum Usage {
         """
         usage: \(executableName) <command> [<options>] [<args>]
         
+        # Generate files from template
+        $ \(executableName) generate {Name}
+        
         ## Options:
         --copyright or -C: Write copyright in header
         --project_name or -P: Write project name in header
+        
+        # Print implements for input/output protocol
+        $ \(executableName) sync-impl {File name}
         
         """
         
