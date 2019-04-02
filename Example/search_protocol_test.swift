@@ -1,15 +1,15 @@
 import Foundation
 
-protocol SampleInput {
+protocol SampleInputs {
     var okButtonDidTap: PublishRelay<Void> { get }
     var textDidEdit: BehaviorRelay<String?> { get }
 }
 
-protocol SampleOutput {
+protocol SampleOutputs {
     var buttonTitle: Driver<String> { get }
 }
 
-class ViewController: SampleInput {
+class ViewController: SampleInputs, SampleOutputs {
     
     // SampleInput
     let okButtonDidTap: BehaviorRelay<Void> = PublishRelay()
