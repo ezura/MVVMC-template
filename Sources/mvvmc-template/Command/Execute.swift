@@ -61,5 +61,8 @@ func execute(command: Command) throws {
         print("Creating \(workFolder.name)/\(name)CoordinatorTests")
         try workFolder.createFile(named: "\(name)CoordinatorTests.swift",
             contents: header(name, "CoordinatorTests") + "\n" + Template.coordinatorTestsTemplate(name))
+    case .printImplement(let filePath):
+        let url = URL(fileURLWithPath: filePath)
+        ImplementWriter().printImplementation(fileURL: url)
     }
 }

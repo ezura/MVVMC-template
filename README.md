@@ -31,8 +31,16 @@ $ mint install ezura/MVVMC-template
 
 ## Usage
 
+### Generate files from template
+
 ```
 $ mvvmc-template generate {Name}
+```
+
+### Print implements for input/output protocol
+
+```
+$ mvvmc-template sync-impl {File name}
 ```
 
 ### Options
