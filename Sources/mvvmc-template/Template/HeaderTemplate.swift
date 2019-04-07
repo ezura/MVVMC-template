@@ -18,6 +18,12 @@ extension Template {
         //  ___COPYRIGHT___
         //
         """
+    
+    static let headerTemplateAsXcodeTemplate: String = 
+        """
+        //___FILEHEADER___
+        """
+            .appending("\n")
 
     static func headerTemplate(fileName: String, projectName: String, userName: String, date: String, copyright: String) -> String {
         let prefix = "//  "
