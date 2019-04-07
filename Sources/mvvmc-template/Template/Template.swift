@@ -6,42 +6,41 @@
 //
 
 import Foundation
+import Files
+import ShellOut
 
 enum Template {
-    case `default`(name: String)
-
-    var model: String {
-        switch self {
-        case .default(name: let name):
-            return Template.modelTemplate(name)
+    static func outputToFile(setting: Setting) throws { 
+        let rootFolder = FileSystem().currentFolder
+        let workFolderName = setting.fileBaseName + "Set"
+        let mainFolderName = setting.fileBaseName
+        
+        print("Creating ./\(workFolderName)")
+        let workFolder = try rootFolder.createSubfolderIfNeeded(withName: workFolderName)
+        defer {
+            do { try shellOut(to: "open \(workFolder.path)") } catch { print(error) }
         }
-    }
-
-    var viewController: String {
-        switch self {
-        case .default(name: let name):
-            return Template.viewControllerTemplate(name)
+        
+        if workFolder.containsSubfolder(named: mainFolderName) {
+            print("Deleting old files: \(workFolderName)/\(mainFolderName)")
+            try workFolder.subfolder(named: mainFolderName).delete()
         }
-    }
-
-    var viewModel: String {
-        switch self {
-        case .default(name: let name):
-            return Template.viewModelTemplate(name)
+        
+        print("Creating \(workFolderName)/\(mainFolderName)")
+        let folder = try workFolder.createSubfolder(named: mainFolderName)
+        
+        try [("Model", Template.modelTemplate),
+             ("ViewController", Template.viewControllerTemplate),
+             ("ViewModel", Template.viewModelTemplate),
+             ("Coordinator", Template.coordinatorTemplate)]
+            .forEach {
+                print("Creating \(folder.name)/\(setting.fileBaseName + $0)")
+                try folder.createFile(named: "\(setting.fileBaseName)\($0).swift",
+                    contents: setting.headerFor(typeName: $0) + "\n" + $1(setting.identifierName))
         }
-    }
-
-    var coordinator: String {
-        switch self {
-        case .default(name: let name):
-            return Template.coordinatorTemplate(name)
-        }
-    }
-
-    var coordinatorTests: String {
-        switch self {
-        case .default(name: let name):
-            return Template.coordinatorTestsTemplate(name)
-        }
+        
+        print("Creating \(workFolder.name)/\(setting.fileBaseName)CoordinatorTests")
+        try workFolder.createFile(named: "\(setting.fileBaseName)CoordinatorTests.swift",
+            contents: setting.headerFor(typeName: "CoordinatorTests") + "\n" + Template.coordinatorTestsTemplate(setting.identifierName))
     }
 }
