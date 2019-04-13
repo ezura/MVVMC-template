@@ -20,9 +20,7 @@ final class CommandInterpreter {
         case "":
             return .success(.empty(options: input.options))
         case "generate":
-            guard let name = input.args.first else {
-                return .failure(.argumentMissing(message: "need name"))
-            }
+            let name = input.args.first
             return .success(.generate(name: name, options: input.options))
         case "sync-implement", "sync-impl":
             guard let filePath = input.args.first else {
