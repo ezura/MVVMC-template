@@ -57,6 +57,28 @@
 			<key>NotPersisted</key>
 			<true/>
 		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>CoordinatorOutputs</string>
+			<key>Name</key>
+			<string>Does ViewModel connect with coordinator?</string>
+			<key>Description</key>
+			<string>Whether to create a protocol for coordinator output</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>part</key>
+				<array>
+					<string>All</string>
+					<string>ViewModel</string>
+				</array>
+			</dict>
+			<key>Default</key>
+			<false/>
+			<key>NotPersisted</key>
+			<false/>
+		</dict>
 	</array>
 </dict>
 </plist>
