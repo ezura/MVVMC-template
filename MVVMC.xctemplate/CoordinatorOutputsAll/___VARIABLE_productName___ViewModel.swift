@@ -8,7 +8,7 @@ import RxSwift
 protocol ___VARIABLE_productName___ViewModeling {
     var inputs: ___VARIABLE_productName___ViewModelInputs { get }
     var outputs: ___VARIABLE_productName___ViewModelOutputs { get }
-    var parentLayerOutputs: ___VARIABLE_productName___ViewModelParentLayerOutputs { get }
+    var coordinatorOutputs: ___VARIABLE_productName___ViewModelCoordinatorOutputs { get }
 }
 
 protocol ___VARIABLE_productName___ViewModelInputs {
@@ -17,20 +17,20 @@ protocol ___VARIABLE_productName___ViewModelInputs {
 protocol ___VARIABLE_productName___ViewModelOutputs {
 }
 
-protocol ___VARIABLE_productName___ViewModelParentLayerOutputs {
+protocol ___VARIABLE_productName___ViewModelCoordinatorOutputs {
 }
 
-final class ___VARIABLE_productName___ViewModel: ___VARIABLE_productName___ViewModelInputs, ___VARIABLE_productName___ViewModelOutputs, ___VARIABLE_productName___ViewModelParentLayerOutputs, ___VARIABLE_productName___ViewModeling {
+final class ___VARIABLE_productName___ViewModel: ___VARIABLE_productName___ViewModelInputs, ___VARIABLE_productName___ViewModelOutputs, ___VARIABLE_productName___ViewModelCoordinatorOutputs, ___VARIABLE_productName___ViewModeling {
 
     var inputs: ___VARIABLE_productName___ViewModelInputs { return self }
     var outputs: ___VARIABLE_productName___ViewModelOutputs { return self }
-    var parentLayerOutputs: ___VARIABLE_productName___ViewModelParentLayerOutputs { return self }
+    var coordinatorOutputs: ___VARIABLE_productName___ViewModelCoordinatorOutputs { return self }
 
     // MARK: - ___VARIABLE_productName___ViewModelInputs
 
     // MARK: - ___VARIABLE_productName___ViewModelOutputs
 
-    // MARK: - ___VARIABLE_productName___ViewModelParentLayerOutputs
+    // MARK: - ___VARIABLE_productName___ViewModelCoordinatorOutputs
 
     // MARK: -
 
