@@ -9,15 +9,24 @@ import Foundation
 import SwiftSyntax
 
 extension ImplementWriter {
-    class ProtocolVisitor: SyntaxVisitor {
-        var onFind: (ProtocolDeclSyntax) -> Void
+    enum InputOutputProtocol {
+        case input(ProtocolDeclSyntax)
+        case output(ProtocolDeclSyntax)
+    }
+    
+    class InputOutputProtocolVisitor: SyntaxVisitor {
+        var onFind: (InputOutputProtocol) -> Void
         
-        init(onFind: @escaping (ProtocolDeclSyntax) -> Void) {
+        init(onFind: @escaping (InputOutputProtocol) -> Void) {
             self.onFind = onFind
         }
         
         override func visit(_ node: ProtocolDeclSyntax) -> SyntaxVisitorContinueKind {
-            onFind(node)
+            if node.identifier.text.hasSuffix("Inputs") {
+                onFind(.input(node))
+            } else if  node.identifier.text.hasSuffix("Outputs") {
+                onFind(.output(node))
+            }
             return .skipChildren
         }
     }
@@ -27,14 +36,15 @@ class ImplementWriter: SyntaxRewriter {
     
     func printImplementation(fileURL: URL) {
         let sourceFile = try! SyntaxTreeParser.parse(fileURL)
-        let visitor = ProtocolVisitor { node in
-            if node.identifier.text.hasSuffix("Inputs") {
+        let visitor = InputOutputProtocolVisitor { foundProtocol in
+            switch foundProtocol {
+            case .input(let node):
                 print("// MARK: - \(node.identifier.text)")
                 node.extractVariableDecl().forEach { (pattern, typeAnnotation) in
-                    print("let \(pattern.identifier): \(typeAnnotation.type)") // TODO: append initializer
+                    print("let \(pattern.identifier): \(typeAnnotation.type)")
                 }
                 print()
-            } else if  node.identifier.text.hasSuffix("Outputs") {
+            case .output(let node):
                 print("// MARK: - \(node.identifier.text)")
                 node.extractVariableDecl().forEach { (pattern, typeAnnotation) in
                     print("let \(pattern.identifier): \(typeAnnotation.type)")
