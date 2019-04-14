@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>MVVMC template files</string>
+	<key>Summary</key>
+	<string>MVVMC template files</string>
+	<key>SortOrder</key>
+	<string>1</string>
+	<key>DefaultCompletionName</key>
+	<string>MyClass</string>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Screen name:</string>
+			<key>Description</key>
+			<string>The name of the screen to create</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>part</string>
+			<key>Required</key>
+			<string>YES</string>
+			<key>Name</key>
+			<string>part of:</string>
+			<key>Description</key>
+			<string>Where part</string>
+			<key>Type</key>
+			<string>combo</string>
+			<key>Default</key>
+			<string>All</string>
+			<key>Values</key>
+			<array>
+				<string>All</string>
+				<string>Coordinator</string>
+				<string>CoordinatorTests</string>
+				<string>Model</string>
+				<string>ViewController</string>
+				<string>ViewModel</string>
+			</array>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>CoordinatorOutputs</string>
+			<key>Name</key>
+			<string>Does ViewModel connect with coordinator?</string>
+			<key>Description</key>
+			<string>Whether to create a protocol for coordinator output</string>
+			<key>Type</key>
+			<string>checkbox</string>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>part</key>
+				<array>
+					<string>All</string>
+					<string>ViewModel</string>
+				</array>
+			</dict>
+			<key>Default</key>
+			<false/>
+			<key>NotPersisted</key>
+			<false/>
+		</dict>
+	</array>
+</dict>
+</plist>
