@@ -1,6 +1,9 @@
 # MVVMC-template
 
-generate MVVMC template.
+generate MVVMC template.  
+And we can use this template as Xcode template by copying [MVVMC.xctemplate](https://github.com/ezura/MVVMC-template/tree/master/MVVMC.xctemplate) into ~/Library/Developer/Xcode/Templates.
+
+<img src="./images/template_screenshot.png" height="300">  <img src="./images/template_file_screenshot.png" height="300">
 
 ## generated files
 * Coordinator
