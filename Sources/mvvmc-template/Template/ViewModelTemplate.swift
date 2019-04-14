@@ -8,7 +8,10 @@
 import Foundation
 
 extension Template {
-    static let viewModelTemplate: (String) -> String = { name in
+    static func viewModelTemplate(parentLayerName: String) -> (String) -> String {
+        let parentLayerNameUppercaesd = parentLayerName.firstUppercased
+        let parentLayerNameCapitalized = parentLayerName.firstLowercased
+        return { name in
 """
 import Foundation
 import Result
@@ -18,7 +21,7 @@ import RxSwift
 protocol \(name)ViewModeling {
     var inputs: \(name)ViewModelInputs { get }
     var outputs: \(name)ViewModelOutputs { get }
-    var coordinatorOutputs: \(name)ViewModelCoordinatorOutputs { get }
+    var \(parentLayerNameCapitalized)Outputs: \(name)ViewModel\(parentLayerNameUppercaesd)Outputs { get }
 }
 
 protocol \(name)ViewModelInputs {
@@ -27,20 +30,20 @@ protocol \(name)ViewModelInputs {
 protocol \(name)ViewModelOutputs {
 }
 
-protocol \(name)ViewModelCoordinatorOutputs {
+protocol \(name)ViewModel\(parentLayerNameUppercaesd)Outputs {
 }
 
-final class \(name)ViewModel: \(name)ViewModelInputs, \(name)ViewModelOutputs, \(name)ViewModelCoordinatorOutputs, \(name)ViewModeling {
+final class \(name)ViewModel: \(name)ViewModelInputs, \(name)ViewModelOutputs, \(name)ViewModel\(parentLayerNameUppercaesd)Outputs, \(name)ViewModeling {
 
     var inputs: \(name)ViewModelInputs { return self }
     var outputs: \(name)ViewModelOutputs { return self }
-    var coordinatorOutputs: \(name)ViewModelCoordinatorOutputs { return self }
+    var \(parentLayerNameCapitalized)Outputs: \(name)ViewModel\(parentLayerNameUppercaesd)Outputs { return self }
 
     // MARK: - \(name)ViewModelInputs
 
     // MARK: - \(name)ViewModelOutputs
 
-    // MARK: - \(name)ViewModelCoordinatorOutputs
+    // MARK: - \(name)ViewModel\(parentLayerNameUppercaesd)Outputs
 
     // MARK: -
 
@@ -57,5 +60,6 @@ final class \(name)ViewModel: \(name)ViewModelInputs, \(name)ViewModelOutputs, \
 }
 
 """
+        }
     }
 }

@@ -56,7 +56,7 @@ struct Template {
         // generate files
         try [("Model", Template.modelTemplate),
              ("ViewController", Template.viewControllerTemplate),
-             ("ViewModel", Template.viewModelTemplate),
+             ("ViewModel", Template.viewModelTemplate(parentLayerName: "Coordinator")),
              ("Coordinator", Template.coordinatorTemplate)]
             .forEach {
                 print("Creating \(folder.name)/\(baseName + $0)")
@@ -82,40 +82,50 @@ struct Template {
         }
         
         // generate each role template
-        try [("Model", Template.modelTemplate),
-             ("ViewController", Template.viewControllerTemplate),
-             ("ViewModel", Template.viewModelTemplate),
-             ("Coordinator", Template.coordinatorTemplate),
-             ("CoordinatorTests", Template.coordinatorTestsTemplate)]
-            .forEach {  (roleName, contentTemplate) in
-                if workFolder.containsSubfolder(named: roleName) {
-                    print("Deleting old files: \(workFolderName)/\(roleName)")
-                    try workFolder.subfolder(named: roleName).delete()
-                }
-                print("Creating \(workFolderName)/\(roleName)")
-                let folder = try workFolder.createSubfolder(named: roleName)
+        try Template.Role.allCases
+            .forEach { (role: Template.Role) in
+                let folderName = role.roleName
+                let fileName = role.xcodeTemplatefileNameWith(baseName: baseName)
+                let contentTemplate = role.templateContent
                 
-                print("Creating \(folder.name)/\(baseName + roleName)")
-                try folder.createFile(named: "\(baseName)\(roleName).swift",
+                if workFolder.containsSubfolder(named: folderName) {
+                    print("Deleting old files: \(workFolderName)/\(folderName)")
+                    try workFolder.subfolder(named: folderName).delete()
+                }
+                print("Creating \(workFolderName)/\(folderName)")
+                let folder = try workFolder.createSubfolder(named: folderName)
+                
+                print("Creating \(folder.name)/\(fileName)")
+                try folder.createFile(named: fileName,
                     contents: Template.headerTemplateAsXcodeTemplate + "\n" + contentTemplate(baseName))
         }
         
-        // generate template containing all templates without file of test target
-        let allTemplatesContainingName = "All"
-        if workFolder.containsSubfolder(named: allTemplatesContainingName) {
-            print("Deleting old files: \(workFolderName)/\(allTemplatesContainingName)")
-            try workFolder.subfolder(named: allTemplatesContainingName).delete()
+        /// generate template containing all templates without file of test target
+        func generateForAllTemplate(isConnectingWithCoordinator: Bool) throws {
+            let allTemplatesContainingName = isConnectingWithCoordinator ? "CoordinatorOutputsAll" : "All"
+            if workFolder.containsSubfolder(named: allTemplatesContainingName) {
+                print("Deleting old files: \(workFolderName)/\(allTemplatesContainingName)")
+                try workFolder.subfolder(named: allTemplatesContainingName).delete()
+            }
+            print("Creating \(workFolderName)/\(allTemplatesContainingName)")
+            let allTemplatesContainingFolder = try workFolder.createSubfolder(named: allTemplatesContainingName)
+            try [Template.Role.model,
+                 .viewModel(isConnectingWithCoordinator: isConnectingWithCoordinator),
+                 .viewController,
+                 .coordinator]
+                .forEach { (role: Template.Role) in
+                    let fileName = role.xcodeTemplatefileNameWith(baseName: baseName)
+                    let contentTemplate = role.templateContent          
+                    print("Creating \(allTemplatesContainingFolder.name)/\(fileName)")
+                    try allTemplatesContainingFolder.createFile(named: fileName,
+                        contents: Template.headerTemplateAsXcodeTemplate + "\n" + contentTemplate(baseName))
+            }
         }
-        print("Creating \(workFolderName)/\(allTemplatesContainingName)")
-        let allTemplatesContainingFolder = try workFolder.createSubfolder(named: allTemplatesContainingName)
-        try [("Model", Template.modelTemplate),
-             ("ViewController", Template.viewControllerTemplate),
-             ("ViewModel", Template.viewModelTemplate),
-             ("Coordinator", Template.coordinatorTemplate)]
-            .forEach {  (roleName, contentTemplate) in                
-                print("Creating \(allTemplatesContainingFolder.name)/\(baseName + roleName)")
-                try allTemplatesContainingFolder.createFile(named: "\(baseName)\(roleName).swift",
-                    contents: Template.headerTemplateAsXcodeTemplate + "\n" + contentTemplate(baseName))
-        }
+        
+        // for template of "All"
+        try generateForAllTemplate(isConnectingWithCoordinator: false)
+        
+        // for template of "CoordinatorOutputsAll"
+        try generateForAllTemplate(isConnectingWithCoordinator: true)
     }
 }
