@@ -49,6 +49,7 @@ description | Option
 --- | ---
 Write copyright in header | `--copyright` or `-C`
 Write project name in header | `--project_name` or `-P`
+Output files as Xcode template|  `--xcode_template`
 
 If you want to set copyright:
 
