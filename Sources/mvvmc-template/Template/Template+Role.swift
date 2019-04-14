@@ -42,6 +42,18 @@ extension Template.Role: CaseIterable {
         }
     }
     
+    var suffixForOption: String {
+        switch self {
+        case .model,
+             .viewController,
+             .coordinator,
+             .coordinatorTests:
+            return ""
+        case .viewModel(let isConnectingWithCoordinator):
+            return isConnectingWithCoordinator ? "CoordinatorOutputs" : ""
+        }
+    }
+    
     func xcodeTemplatefileNameWith(baseName: String) -> String {
         switch self {
         case .model:

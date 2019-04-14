@@ -84,7 +84,7 @@ struct Template {
         // generate each role template
         try Template.Role.allCases
             .forEach { (role: Template.Role) in
-                let folderName = role.roleName
+                let folderName = role.roleName + role.suffixForOption
                 let fileName = role.xcodeTemplatefileNameWith(baseName: baseName)
                 let contentTemplate = role.templateContent
                 
@@ -102,7 +102,7 @@ struct Template {
         
         /// generate template containing all templates without file of test target
         func generateForAllTemplate(isConnectingWithCoordinator: Bool) throws {
-            let allTemplatesContainingName = isConnectingWithCoordinator ? "CoordinatorOutputsAll" : "All"
+            let allTemplatesContainingName = isConnectingWithCoordinator ? "AllCoordinatorOutputs" : "All"
             if workFolder.containsSubfolder(named: allTemplatesContainingName) {
                 print("Deleting old files: \(workFolderName)/\(allTemplatesContainingName)")
                 try workFolder.subfolder(named: allTemplatesContainingName).delete()
