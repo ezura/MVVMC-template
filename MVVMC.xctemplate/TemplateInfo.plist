@@ -54,6 +54,8 @@
 				<string>ViewController</string>
 				<string>ViewModel</string>
 			</array>
+			<key>NotPersisted</key>
+			<true/>
 		</dict>
 	</array>
 </dict>
