@@ -32,6 +32,6 @@ func execute(command: Command) throws {
         try Template(config: templateSetting).writeToFiles()
     case .printImplement(let filePath):
         let url = URL(fileURLWithPath: filePath)
-        ImplementWriter().printImplementation(fileURL: url)
+        ImplementWriter().grouping(fileURL: url)
     }
 }
