@@ -41,4 +41,3 @@ class ViewController: SampleInputs, SampleOutputs where A: E {
         print("")
     }
 }
-
