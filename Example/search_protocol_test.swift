@@ -13,20 +13,20 @@ protocol SampleOutputs {
 class ViewController: SampleInputs, SampleOutputs {
     let textDidEdit: BehaviorRelay<String?> = BehaviorRelay(value: nil)
     
-    // SampleInput
+    // MARK: SampleInputs
     let okButtonDidTap: BehaviorRelay<Void> = PublishRelay()
     
-    // SampleOutput
+    // MARK: SampleOutputs
     let buttonTitle: Driver<String>
 }
 
-struct ViewController: SampleInputs, SampleOutputs where A: E {
+class ViewController: SampleInputs, SampleOutputs where A: E {
     let textDidEdit: BehaviorRelay<String?> = BehaviorRelay(value: nil)
     
-    // SampleInput
+    // MARK: SampleOutputs
     private let okButtonDidTap : BehaviorRelay<Void> = PublishRelay()
     
-    // SampleOutput
+    // MARK: SampleOutputs
     let buttonTitle: Driver<String>
     
     struct  Dependency {
