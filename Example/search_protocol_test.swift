@@ -23,7 +23,7 @@ class ViewController: SampleInputs, SampleOutputs {
 class ViewController: SampleInputs, SampleOutputs where A: E {
     let textDidEdit: BehaviorRelay<String?> = BehaviorRelay(value: nil)
     
-    // MARK: SampleOutputs
+    // MARK: SampleInputs
     private let okButtonDidTap : BehaviorRelay<Void> = PublishRelay()
     
     // MARK: SampleOutputs
