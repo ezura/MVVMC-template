@@ -7,14 +7,37 @@ protocol SampleInputs {
 
 protocol SampleOutputs {
     var buttonTitle: Driver<String> { get }
+    func f(a: Int)
 }
 
 class ViewController: SampleInputs, SampleOutputs {
-    
-    // SampleInput
-    let okButtonDidTap: BehaviorRelay<Void> = PublishRelay()
     let textDidEdit: BehaviorRelay<String?> = BehaviorRelay(value: nil)
     
-    // SampleOutput
+    // MARK: SampleInputs
+    let okButtonDidTap: BehaviorRelay<Void> = PublishRelay()
+    
+    // MARK: SampleOutputs
     let buttonTitle: Driver<String>
+}
+
+class ViewController: SampleInputs, SampleOutputs where A: E {
+    let textDidEdit: BehaviorRelay<String?> = BehaviorRelay(value: nil)
+    
+    // MARK: SampleInputs
+    private let okButtonDidTap : BehaviorRelay<Void> = PublishRelay()
+    
+    // MARK: SampleOutputs
+    let buttonTitle: Driver<String>
+    
+    struct  Dependency {
+        let a: A
+    }
+    
+    init() {
+        print("init")
+    }
+    
+    func f(a: Int) {
+        print("")
+    }
 }
