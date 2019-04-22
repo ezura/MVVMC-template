@@ -43,9 +43,9 @@ $ mvvmc-template generate {Name}
 ### Sort the implementation in the order of declaration in input/output protocol
 
 ```
-$ mvvmc-template sort-impl {File name}
+$ mvvmc-template sort-impl {File or directory path}
 or
-$ mvvmc-template sort-implement {File name}
+$ mvvmc-template sort-implement {File or directory path}
 ```
 
 ### Options
