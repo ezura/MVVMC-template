@@ -40,7 +40,7 @@ $ mint install ezura/MVVMC-template
 $ mvvmc-template generate {Name}
 ```
 
-### Print implements for input/output protocol
+### Sort the implementation in the order of declaration in input/output protocol
 
 ```
 $ mvvmc-template sort-impl {File name}
