@@ -10,5 +10,5 @@ import Foundation
 enum Command {
     case empty(options: [Option])
     case generate(name: String?, options: [Option])
-    case printImplement(filePath: String)
+    case sortImpl(path: String)
 }

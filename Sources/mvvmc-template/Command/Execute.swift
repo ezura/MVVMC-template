@@ -30,8 +30,9 @@ func execute(command: Command) throws {
                                                       projectName: options.first { $0.0 == "--project_name" || $0.0 == "-P" }?.1 ?? "")
         }
         try Template(config: templateSetting).writeToFiles()
-    case .printImplement(let filePath):
-        let url = URL(fileURLWithPath: filePath)
-        ImplementWriter().grouping(fileURL: url)
+    case .sortImpl(let path):
+        FileVisitor().visit(directoryOrFilePath: path, fileExtension: "swift") { (fileURL) in
+            ImplementWriter().sort(fileURL: fileURL)
+        }
     }
 }

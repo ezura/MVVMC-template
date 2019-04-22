@@ -43,7 +43,9 @@ $ mvvmc-template generate {Name}
 ### Print implements for input/output protocol
 
 ```
-$ mvvmc-template sync-impl {File name}
+$ mvvmc-template sort-impl {File name}
+or
+$ mvvmc-template sort-implement {File name}
 ```
 
 ### Options
@@ -58,11 +60,14 @@ If you want to set copyright:
 
 ```
 $ mvvmc-template generate --copyright "{copyright}" {Name}
-// or
+or
 $ mvvmc-template generate -C "{copyright}" {Name}
 ```
 
 ## tasks
+### xctemplate
+* [x] [MVVMC.xctemplate](https://github.com/ezura/MVVMC-template/tree/master/MVVMC.xctemplate)
+
 ### generate files
 * [x] ViewModel
   - [x] protocol
@@ -76,8 +81,7 @@ $ mvvmc-template generate -C "{copyright}" {Name}
 * [x] ViewController
 
 ### mode
-* [ ] strict mode (kickstarter)
-* [ ] generate and install as xcode template (ref: https://useyourloaf.com/blog/creating-custom-xcode-project-templates/)
+* [x] sort implement
 
 ### improve feature
 * [x] header template
