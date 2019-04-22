@@ -1,8 +1,8 @@
 import Foundation
 
 protocol SampleInputs {
-    var okButtonDidTap: PublishRelay<Void> { get }
     var textDidEdit: BehaviorRelay<String?> { get }
+    var okButtonDidTap: PublishRelay<Void> { get }
 }
 
 protocol SampleOutputs {
@@ -11,22 +11,23 @@ protocol SampleOutputs {
 }
 
 class ViewController: SampleInputs, SampleOutputs {
-    let textDidEdit: BehaviorRelay<String?> = BehaviorRelay(value: nil)
-    
-    // MARK: SampleInputs
     let okButtonDidTap: BehaviorRelay<Void> = PublishRelay()
     
-    // MARK: SampleOutputs
+    // MARK: - SampleInputs
+    /// comment for `textDidEdit`
+    let textDidEdit: BehaviorRelay<String?> = BehaviorRelay(value: nil)
+    
+    // MARK: - SampleOutputs
     let buttonTitle: Driver<String>
 }
 
 class ViewController: SampleInputs, SampleOutputs where A: E {
     let textDidEdit: BehaviorRelay<String?> = BehaviorRelay(value: nil)
     
-    // MARK: SampleInputs
+    // MARK: - SampleInputs
     private let okButtonDidTap : BehaviorRelay<Void> = PublishRelay()
     
-    // MARK: SampleOutputs
+    // MARK: - SampleOutput
     let buttonTitle: Driver<String>
     
     struct  Dependency {

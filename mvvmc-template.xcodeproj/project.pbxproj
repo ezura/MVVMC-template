@@ -1,1840 +1,1311 @@
 // !$*UTF8*$!
 {
-   archiveVersion = "1";
-   objectVersion = "46";
-   objects = {
-      "Files::Files" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_90";
-         buildPhases = (
-            "OBJ_93",
-            "OBJ_95"
-         );
-         dependencies = (
-         );
-         name = "Files";
-         productName = "Files";
-         productReference = "Files::Files::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "Files::Files::Product" = {
-         isa = "PBXFileReference";
-         path = "Files.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "Files::SwiftPMPackageDescription" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_97";
-         buildPhases = (
-            "OBJ_100"
-         );
-         dependencies = (
-         );
-         name = "FilesPackageDescription";
-         productName = "FilesPackageDescription";
-         productType = "com.apple.product-type.framework";
-      };
-      "OBJ_1" = {
-         isa = "PBXProject";
-         attributes = {
-            LastSwiftMigration = "9999";
-            LastUpgradeCheck = "9999";
-         };
-         buildConfigurationList = "OBJ_2";
-         compatibilityVersion = "Xcode 3.2";
-         developmentRegion = "English";
-         hasScannedForEncodings = "0";
-         knownRegions = (
-            "en"
-         );
-         mainGroup = "OBJ_5";
-         productRefGroup = "OBJ_77";
-         projectDirPath = ".";
-         targets = (
-            "Files::Files",
-            "Files::SwiftPMPackageDescription",
-            "ShellOut::ShellOut",
-            "ShellOut::SwiftPMPackageDescription",
-            "SwiftSyntax::SwiftSyntax",
-            "SwiftSyntax::SwiftPMPackageDescription",
-            "mvvmc-template::mvvmc-template",
-            "mvvmc-template::SwiftPMPackageDescription",
-            "mvvmc-template::mvvmc-templatePackageTests::ProductTarget",
-            "mvvmc-template::mvvmc-templateTests"
-         );
-      };
-      "OBJ_10" = {
-         isa = "PBXFileReference";
-         path = "Command.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_100" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_101"
-         );
-      };
-      "OBJ_101" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_75";
-      };
-      "OBJ_103" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_104",
-            "OBJ_105"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_104" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "mvvmc-template.xcodeproj/ShellOut_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "ShellOut";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "ShellOut";
-         };
-         name = "Debug";
-      };
-      "OBJ_105" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "mvvmc-template.xcodeproj/ShellOut_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "ShellOut";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "ShellOut";
-         };
-         name = "Release";
-      };
-      "OBJ_106" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_107"
-         );
-      };
-      "OBJ_107" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_73";
-      };
-      "OBJ_108" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
-      };
-      "OBJ_11" = {
-         isa = "PBXFileReference";
-         path = "CommandInterpreter.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_110" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_111",
-            "OBJ_112"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_111" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Debug";
-      };
-      "OBJ_112" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Release";
-      };
-      "OBJ_113" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_114"
-         );
-      };
-      "OBJ_114" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_72";
-      };
-      "OBJ_116" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_117",
-            "OBJ_118"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_117" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "mvvmc-template.xcodeproj/SwiftSyntax_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "SwiftSyntax";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "SwiftSyntax";
-         };
-         name = "Debug";
-      };
-      "OBJ_118" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "mvvmc-template.xcodeproj/SwiftSyntax_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "SwiftSyntax";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "SwiftSyntax";
-         };
-         name = "Release";
-      };
-      "OBJ_119" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_120",
-            "OBJ_121",
-            "OBJ_122",
-            "OBJ_123",
-            "OBJ_124",
-            "OBJ_125",
-            "OBJ_126",
-            "OBJ_127",
-            "OBJ_128",
-            "OBJ_129",
-            "OBJ_130",
-            "OBJ_131",
-            "OBJ_132",
-            "OBJ_133",
-            "OBJ_134",
-            "OBJ_135",
-            "OBJ_136",
-            "OBJ_137",
-            "OBJ_138",
-            "OBJ_139",
-            "OBJ_140",
-            "OBJ_141",
-            "OBJ_142",
-            "OBJ_143",
-            "OBJ_144",
-            "OBJ_145"
-         );
-      };
-      "OBJ_12" = {
-         isa = "PBXFileReference";
-         path = "CommandModel.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_120" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_42";
-      };
-      "OBJ_121" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_43";
-      };
-      "OBJ_122" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_44";
-      };
-      "OBJ_123" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_45";
-      };
-      "OBJ_124" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_46";
-      };
-      "OBJ_125" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_47";
-      };
-      "OBJ_126" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_48";
-      };
-      "OBJ_127" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_49";
-      };
-      "OBJ_128" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_50";
-      };
-      "OBJ_129" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_51";
-      };
-      "OBJ_13" = {
-         isa = "PBXFileReference";
-         path = "CommandParser.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_130" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_52";
-      };
-      "OBJ_131" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_53";
-      };
-      "OBJ_132" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_54";
-      };
-      "OBJ_133" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_55";
-      };
-      "OBJ_134" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_56";
-      };
-      "OBJ_135" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_57";
-      };
-      "OBJ_136" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_58";
-      };
-      "OBJ_137" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_60";
-      };
-      "OBJ_138" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_61";
-      };
-      "OBJ_139" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_62";
-      };
-      "OBJ_14" = {
-         isa = "PBXFileReference";
-         path = "Execute.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_140" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_63";
-      };
-      "OBJ_141" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_64";
-      };
-      "OBJ_142" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_65";
-      };
-      "OBJ_143" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_66";
-      };
-      "OBJ_144" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_67";
-      };
-      "OBJ_145" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_68";
-      };
-      "OBJ_146" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
-      };
-      "OBJ_148" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_149",
-            "OBJ_150"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_149" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Debug";
-      };
-      "OBJ_15" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_16",
-            "OBJ_17",
-            "OBJ_18"
-         );
-         name = "SyncImplement";
-         path = "SyncImplement";
-         sourceTree = "<group>";
-      };
-      "OBJ_150" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Release";
-      };
-      "OBJ_151" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_152"
-         );
-      };
-      "OBJ_152" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_70";
-      };
-      "OBJ_154" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_155",
-            "OBJ_156"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_155" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "mvvmc-template.xcodeproj/mvvmc_template_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "mvvmc-template";
-         };
-         name = "Debug";
-      };
-      "OBJ_156" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "mvvmc-template.xcodeproj/mvvmc_template_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "mvvmc-template";
-         };
-         name = "Release";
-      };
-      "OBJ_157" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_158",
-            "OBJ_159",
-            "OBJ_160",
-            "OBJ_161",
-            "OBJ_162",
-            "OBJ_163",
-            "OBJ_164",
-            "OBJ_165",
-            "OBJ_166",
-            "OBJ_167",
-            "OBJ_168",
-            "OBJ_169",
-            "OBJ_170",
-            "OBJ_171",
-            "OBJ_172",
-            "OBJ_173",
-            "OBJ_174",
-            "OBJ_175",
-            "OBJ_176",
-            "OBJ_177",
-            "OBJ_178",
-            "OBJ_179"
-         );
-      };
-      "OBJ_158" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_10";
-      };
-      "OBJ_159" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_11";
-      };
-      "OBJ_16" = {
-         isa = "PBXFileReference";
-         path = "ImplementWriter.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_160" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_12";
-      };
-      "OBJ_161" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_13";
-      };
-      "OBJ_162" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_14";
-      };
-      "OBJ_163" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_16";
-      };
-      "OBJ_164" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_17";
-      };
-      "OBJ_165" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_18";
-      };
-      "OBJ_166" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_20";
-      };
-      "OBJ_167" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_21";
-      };
-      "OBJ_168" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_22";
-      };
-      "OBJ_169" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_23";
-      };
-      "OBJ_17" = {
-         isa = "PBXFileReference";
-         path = "ProtocolDeclSyntax+Property.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_170" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_24";
-      };
-      "OBJ_171" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_25";
-      };
-      "OBJ_172" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_26";
-      };
-      "OBJ_173" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_27";
-      };
-      "OBJ_174" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_28";
-      };
-      "OBJ_175" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_29";
-      };
-      "OBJ_176" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_31";
-      };
-      "OBJ_177" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_32";
-      };
-      "OBJ_178" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_33";
-      };
-      "OBJ_179" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_34";
-      };
-      "OBJ_18" = {
-         isa = "PBXFileReference";
-         path = "VariableDeclSyntax++Property.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_180" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_181",
-            "OBJ_182",
-            "OBJ_183"
-         );
-      };
-      "OBJ_181" = {
-         isa = "PBXBuildFile";
-         fileRef = "SwiftSyntax::SwiftSyntax::Product";
-      };
-      "OBJ_182" = {
-         isa = "PBXBuildFile";
-         fileRef = "ShellOut::ShellOut::Product";
-      };
-      "OBJ_183" = {
-         isa = "PBXBuildFile";
-         fileRef = "Files::Files::Product";
-      };
-      "OBJ_184" = {
-         isa = "PBXTargetDependency";
-         target = "SwiftSyntax::SwiftSyntax";
-      };
-      "OBJ_185" = {
-         isa = "PBXTargetDependency";
-         target = "ShellOut::ShellOut";
-      };
-      "OBJ_186" = {
-         isa = "PBXTargetDependency";
-         target = "Files::Files";
-      };
-      "OBJ_188" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_189",
-            "OBJ_190"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_189" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Debug";
-      };
-      "OBJ_19" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_20",
-            "OBJ_21",
-            "OBJ_22",
-            "OBJ_23",
-            "OBJ_24",
-            "OBJ_25",
-            "OBJ_26",
-            "OBJ_27",
-            "OBJ_28"
-         );
-         name = "Template";
-         path = "Template";
-         sourceTree = "<group>";
-      };
-      "OBJ_190" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Release";
-      };
-      "OBJ_191" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_192"
-         );
-      };
-      "OBJ_192" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_6";
-      };
-      "OBJ_194" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_195",
-            "OBJ_196"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_195" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-         };
-         name = "Debug";
-      };
-      "OBJ_196" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-         };
-         name = "Release";
-      };
-      "OBJ_197" = {
-         isa = "PBXTargetDependency";
-         target = "mvvmc-template::mvvmc-templateTests";
-      };
-      "OBJ_199" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_200",
-            "OBJ_201"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_2" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_3",
-            "OBJ_4"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_20" = {
-         isa = "PBXFileReference";
-         path = "CoordinatorTemplate.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_200" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "mvvmc-template.xcodeproj/mvvmc_templateTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "mvvmc-templateTests";
-         };
-         name = "Debug";
-      };
-      "OBJ_201" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "mvvmc-template.xcodeproj/mvvmc_templateTests_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "mvvmc-templateTests";
-         };
-         name = "Release";
-      };
-      "OBJ_202" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_203",
-            "OBJ_204"
-         );
-      };
-      "OBJ_203" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_37";
-      };
-      "OBJ_204" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_38";
-      };
-      "OBJ_205" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_206",
-            "OBJ_207",
-            "OBJ_208"
-         );
-      };
-      "OBJ_206" = {
-         isa = "PBXBuildFile";
-         fileRef = "SwiftSyntax::SwiftSyntax::Product";
-      };
-      "OBJ_207" = {
-         isa = "PBXBuildFile";
-         fileRef = "ShellOut::ShellOut::Product";
-      };
-      "OBJ_208" = {
-         isa = "PBXBuildFile";
-         fileRef = "Files::Files::Product";
-      };
-      "OBJ_209" = {
-         isa = "PBXTargetDependency";
-         target = "mvvmc-template::mvvmc-template";
-      };
-      "OBJ_21" = {
-         isa = "PBXFileReference";
-         path = "CoordinatorTestsTemplate.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_210" = {
-         isa = "PBXTargetDependency";
-         target = "SwiftSyntax::SwiftSyntax";
-      };
-      "OBJ_211" = {
-         isa = "PBXTargetDependency";
-         target = "ShellOut::ShellOut";
-      };
-      "OBJ_212" = {
-         isa = "PBXTargetDependency";
-         target = "Files::Files";
-      };
-      "OBJ_22" = {
-         isa = "PBXFileReference";
-         path = "HeaderTemplate.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_23" = {
-         isa = "PBXFileReference";
-         path = "ModelTemplate.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_24" = {
-         isa = "PBXFileReference";
-         path = "Template+Role.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_25" = {
-         isa = "PBXFileReference";
-         path = "Template.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_26" = {
-         isa = "PBXFileReference";
-         path = "TemplateSetting.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_27" = {
-         isa = "PBXFileReference";
-         path = "ViewControllerTemplate.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_28" = {
-         isa = "PBXFileReference";
-         path = "ViewModelTemplate.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_29" = {
-         isa = "PBXFileReference";
-         path = "Usage.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_3" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_OBJC_ARC = "YES";
-            COMBINE_HIDPI_IMAGES = "YES";
-            COPY_PHASE_STRIP = "NO";
-            DEBUG_INFORMATION_FORMAT = "dwarf";
-            DYLIB_INSTALL_NAME_BASE = "@rpath";
-            ENABLE_NS_ASSERTIONS = "YES";
-            GCC_OPTIMIZATION_LEVEL = "0";
-            GCC_PREPROCESSOR_DEFINITIONS = (
-               "$(inherited)",
-               "SWIFT_PACKAGE=1",
-               "DEBUG=1"
-            );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            ONLY_ACTIVE_ARCH = "YES";
-            OTHER_SWIFT_FLAGS = (
-               "-DXcode"
-            );
-            PRODUCT_NAME = "$(TARGET_NAME)";
-            SDKROOT = "macosx";
-            SUPPORTED_PLATFORMS = (
-               "macosx",
-               "iphoneos",
-               "iphonesimulator",
-               "appletvos",
-               "appletvsimulator",
-               "watchos",
-               "watchsimulator"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)",
-               "SWIFT_PACKAGE",
-               "DEBUG"
-            );
-            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            USE_HEADERMAP = "NO";
-         };
-         name = "Debug";
-      };
-      "OBJ_30" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_31",
-            "OBJ_32",
-            "OBJ_33"
-         );
-         name = "Util";
-         path = "Util";
-         sourceTree = "<group>";
-      };
-      "OBJ_31" = {
-         isa = "PBXFileReference";
-         path = "CommandLine.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_32" = {
-         isa = "PBXFileReference";
-         path = "Result.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_33" = {
-         isa = "PBXFileReference";
-         path = "String+Capitalize.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_34" = {
-         isa = "PBXFileReference";
-         path = "main.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_35" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_36"
-         );
-         name = "Tests";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_36" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_37",
-            "OBJ_38"
-         );
-         name = "mvvmc-templateTests";
-         path = "Tests/mvvmc-templateTests";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_37" = {
-         isa = "PBXFileReference";
-         path = "XCTestManifests.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_38" = {
-         isa = "PBXFileReference";
-         path = "mvvmc_templateTests.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_39" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_40",
-            "OBJ_71",
-            "OBJ_74"
-         );
-         name = "Dependencies";
-         path = "";
-         sourceTree = "<group>";
-      };
-      "OBJ_4" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_OBJC_ARC = "YES";
-            COMBINE_HIDPI_IMAGES = "YES";
-            COPY_PHASE_STRIP = "YES";
-            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-            DYLIB_INSTALL_NAME_BASE = "@rpath";
-            GCC_OPTIMIZATION_LEVEL = "s";
-            GCC_PREPROCESSOR_DEFINITIONS = (
-               "$(inherited)",
-               "SWIFT_PACKAGE=1"
-            );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_SWIFT_FLAGS = (
-               "-DXcode"
-            );
-            PRODUCT_NAME = "$(TARGET_NAME)";
-            SDKROOT = "macosx";
-            SUPPORTED_PLATFORMS = (
-               "macosx",
-               "iphoneos",
-               "iphonesimulator",
-               "appletvos",
-               "appletvsimulator",
-               "watchos",
-               "watchsimulator"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)",
-               "SWIFT_PACKAGE"
-            );
-            SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-            USE_HEADERMAP = "NO";
-         };
-         name = "Release";
-      };
-      "OBJ_40" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_41",
-            "OBJ_69",
-            "OBJ_70"
-         );
-         name = "SwiftSyntax 0.50000.0";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_41" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_42",
-            "OBJ_43",
-            "OBJ_44",
-            "OBJ_45",
-            "OBJ_46",
-            "OBJ_47",
-            "OBJ_48",
-            "OBJ_49",
-            "OBJ_50",
-            "OBJ_51",
-            "OBJ_52",
-            "OBJ_53",
-            "OBJ_54",
-            "OBJ_55",
-            "OBJ_56",
-            "OBJ_57",
-            "OBJ_58",
-            "OBJ_59"
-         );
-         name = "SwiftSyntax";
-         path = ".build/checkouts/swift-syntax/Sources/SwiftSyntax";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_42" = {
-         isa = "PBXFileReference";
-         path = "AbsolutePosition.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_43" = {
-         isa = "PBXFileReference";
-         path = "ByteTreeDeserialization.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_44" = {
-         isa = "PBXFileReference";
-         path = "Diagnostic.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_45" = {
-         isa = "PBXFileReference";
-         path = "DiagnosticConsumer.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_46" = {
-         isa = "PBXFileReference";
-         path = "DiagnosticEngine.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_47" = {
-         isa = "PBXFileReference";
-         path = "JSONDiagnosticConsumer.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_48" = {
-         isa = "PBXFileReference";
-         path = "LazyNonThreadSafeCache.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_49" = {
-         isa = "PBXFileReference";
-         path = "PrintingDiagnosticConsumer.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_5" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_6",
-            "OBJ_7",
-            "OBJ_35",
-            "OBJ_39",
-            "OBJ_77",
-            "OBJ_83",
-            "OBJ_84",
-            "OBJ_85",
-            "OBJ_86",
-            "OBJ_87",
-            "OBJ_88"
-         );
-         path = "";
-         sourceTree = "<group>";
-      };
-      "OBJ_50" = {
-         isa = "PBXFileReference";
-         path = "RawSyntax.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_51" = {
-         isa = "PBXFileReference";
-         path = "SourceLength.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_52" = {
-         isa = "PBXFileReference";
-         path = "SourcePresence.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_53" = {
-         isa = "PBXFileReference";
-         path = "SwiftSyntax.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_54" = {
-         isa = "PBXFileReference";
-         path = "SwiftcInvocation.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_55" = {
-         isa = "PBXFileReference";
-         path = "Syntax.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_56" = {
-         isa = "PBXFileReference";
-         path = "SyntaxChildren.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_57" = {
-         isa = "PBXFileReference";
-         path = "SyntaxData.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_58" = {
-         isa = "PBXFileReference";
-         path = "WeakLookupTable.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_59" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_60",
-            "OBJ_61",
-            "OBJ_62",
-            "OBJ_63",
-            "OBJ_64",
-            "OBJ_65",
-            "OBJ_66",
-            "OBJ_67",
-            "OBJ_68"
-         );
-         name = "gyb_generated";
-         path = "gyb_generated";
-         sourceTree = "<group>";
-      };
-      "OBJ_6" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         path = "Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_60" = {
-         isa = "PBXFileReference";
-         path = "SyntaxBuilders.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_61" = {
-         isa = "PBXFileReference";
-         path = "SyntaxClassifier.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_62" = {
-         isa = "PBXFileReference";
-         path = "SyntaxCollections.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_63" = {
-         isa = "PBXFileReference";
-         path = "SyntaxFactory.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_64" = {
-         isa = "PBXFileReference";
-         path = "SyntaxKind.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_65" = {
-         isa = "PBXFileReference";
-         path = "SyntaxNodes.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_66" = {
-         isa = "PBXFileReference";
-         path = "SyntaxRewriter.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_67" = {
-         isa = "PBXFileReference";
-         path = "TokenKind.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_68" = {
-         isa = "PBXFileReference";
-         path = "Trivia.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_69" = {
-         isa = "PBXGroup";
-         children = (
-         );
-         name = "lit-test-helper";
-         path = ".build/checkouts/swift-syntax/Sources/lit-test-helper";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_7" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_8"
-         );
-         name = "Sources";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_70" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         name = "Package.swift";
-         path = "/Users/ezura/workspace/lib-prj/mvvmc-template/.build/checkouts/swift-syntax/Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_71" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_72",
-            "OBJ_73"
-         );
-         name = "ShellOut";
-         path = ".build/checkouts/ShellOut.git--8827736993552148064/Sources";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_72" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         name = "Package.swift";
-         path = "/Users/ezura/workspace/lib-prj/mvvmc-template/.build/checkouts/ShellOut.git--8827736993552148064/Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_73" = {
-         isa = "PBXFileReference";
-         path = "ShellOut.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_74" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_75",
-            "OBJ_76"
-         );
-         name = "Files 2.3.0";
-         path = ".build/checkouts/Files.git-2076961594658293535/Sources";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_75" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         name = "Package.swift";
-         path = "/Users/ezura/workspace/lib-prj/mvvmc-template/.build/checkouts/Files.git-2076961594658293535/Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_76" = {
-         isa = "PBXFileReference";
-         path = "Files.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_77" = {
-         isa = "PBXGroup";
-         children = (
-            "mvvmc-template::mvvmc-template::Product",
-            "SwiftSyntax::SwiftSyntax::Product",
-            "mvvmc-template::mvvmc-templateTests::Product",
-            "ShellOut::ShellOut::Product",
-            "Files::Files::Product"
-         );
-         name = "Products";
-         path = "";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "OBJ_8" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_9",
-            "OBJ_15",
-            "OBJ_19",
-            "OBJ_29",
-            "OBJ_30",
-            "OBJ_34"
-         );
-         name = "mvvmc-template";
-         path = "Sources/mvvmc-template";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_83" = {
-         isa = "PBXFileReference";
-         path = "images";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_84" = {
-         isa = "PBXFileReference";
-         path = "Example";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_85" = {
-         isa = "PBXFileReference";
-         path = "MVVMC.xctemplate";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_86" = {
-         isa = "PBXFileReference";
-         path = "__OUTPUT__Set";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_87" = {
-         isa = "PBXFileReference";
-         path = "Makefile";
-         sourceTree = "<group>";
-      };
-      "OBJ_88" = {
-         isa = "PBXFileReference";
-         path = "README.md";
-         sourceTree = "<group>";
-      };
-      "OBJ_9" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_10",
-            "OBJ_11",
-            "OBJ_12",
-            "OBJ_13",
-            "OBJ_14"
-         );
-         name = "Command";
-         path = "Command";
-         sourceTree = "<group>";
-      };
-      "OBJ_90" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_91",
-            "OBJ_92"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_91" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "mvvmc-template.xcodeproj/Files_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "Files";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.0";
-            TARGET_NAME = "Files";
-         };
-         name = "Debug";
-      };
-      "OBJ_92" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "mvvmc-template.xcodeproj/Files_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "Files";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_VERSION = "4.0";
-            TARGET_NAME = "Files";
-         };
-         name = "Release";
-      };
-      "OBJ_93" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_94"
-         );
-      };
-      "OBJ_94" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_76";
-      };
-      "OBJ_95" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
-      };
-      "OBJ_97" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_98",
-            "OBJ_99"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_98" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.0";
-         };
-         name = "Debug";
-      };
-      "OBJ_99" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk"
-            );
-            SWIFT_VERSION = "4.0";
-         };
-         name = "Release";
-      };
-      "ShellOut::ShellOut" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_103";
-         buildPhases = (
-            "OBJ_106",
-            "OBJ_108"
-         );
-         dependencies = (
-         );
-         name = "ShellOut";
-         productName = "ShellOut";
-         productReference = "ShellOut::ShellOut::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "ShellOut::ShellOut::Product" = {
-         isa = "PBXFileReference";
-         path = "ShellOut.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "ShellOut::SwiftPMPackageDescription" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_110";
-         buildPhases = (
-            "OBJ_113"
-         );
-         dependencies = (
-         );
-         name = "ShellOutPackageDescription";
-         productName = "ShellOutPackageDescription";
-         productType = "com.apple.product-type.framework";
-      };
-      "SwiftSyntax::SwiftPMPackageDescription" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_148";
-         buildPhases = (
-            "OBJ_151"
-         );
-         dependencies = (
-         );
-         name = "SwiftSyntaxPackageDescription";
-         productName = "SwiftSyntaxPackageDescription";
-         productType = "com.apple.product-type.framework";
-      };
-      "SwiftSyntax::SwiftSyntax" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_116";
-         buildPhases = (
-            "OBJ_119",
-            "OBJ_146"
-         );
-         dependencies = (
-         );
-         name = "SwiftSyntax";
-         productName = "SwiftSyntax";
-         productReference = "SwiftSyntax::SwiftSyntax::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "SwiftSyntax::SwiftSyntax::Product" = {
-         isa = "PBXFileReference";
-         path = "SwiftSyntax.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "mvvmc-template::SwiftPMPackageDescription" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_188";
-         buildPhases = (
-            "OBJ_191"
-         );
-         dependencies = (
-         );
-         name = "mvvmc-templatePackageDescription";
-         productName = "mvvmc-templatePackageDescription";
-         productType = "com.apple.product-type.framework";
-      };
-      "mvvmc-template::mvvmc-template" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_154";
-         buildPhases = (
-            "OBJ_157",
-            "OBJ_180"
-         );
-         dependencies = (
-            "OBJ_184",
-            "OBJ_185",
-            "OBJ_186"
-         );
-         name = "mvvmc-template";
-         productName = "mvvmc_template";
-         productReference = "mvvmc-template::mvvmc-template::Product";
-         productType = "com.apple.product-type.tool";
-      };
-      "mvvmc-template::mvvmc-template::Product" = {
-         isa = "PBXFileReference";
-         path = "mvvmc-template";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "mvvmc-template::mvvmc-templatePackageTests::ProductTarget" = {
-         isa = "PBXAggregateTarget";
-         buildConfigurationList = "OBJ_194";
-         buildPhases = (
-         );
-         dependencies = (
-            "OBJ_197"
-         );
-         name = "mvvmc-templatePackageTests";
-         productName = "mvvmc-templatePackageTests";
-      };
-      "mvvmc-template::mvvmc-templateTests" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_199";
-         buildPhases = (
-            "OBJ_202",
-            "OBJ_205"
-         );
-         dependencies = (
-            "OBJ_209",
-            "OBJ_210",
-            "OBJ_211",
-            "OBJ_212"
-         );
-         name = "mvvmc-templateTests";
-         productName = "mvvmc_templateTests";
-         productReference = "mvvmc-template::mvvmc-templateTests::Product";
-         productType = "com.apple.product-type.bundle.unit-test";
-      };
-      "mvvmc-template::mvvmc-templateTests::Product" = {
-         isa = "PBXFileReference";
-         path = "mvvmc_templateTests.xctest";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-   };
-   rootObject = "OBJ_1";
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"mvvmc-template::mvvmc-templatePackageTests::ProductTarget" /* mvvmc-templatePackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_200 /* Build configuration list for PBXAggregateTarget "mvvmc-templatePackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_203 /* PBXTargetDependency */,
+			);
+			name = "mvvmc-templatePackageTests";
+			productName = "mvvmc-templatePackageTests";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_104 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* Package.swift */; };
+		OBJ_110 /* ShellOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* ShellOut.swift */; };
+		OBJ_117 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Package.swift */; };
+		OBJ_123 /* AbsolutePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* AbsolutePosition.swift */; };
+		OBJ_124 /* ByteTreeDeserialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ByteTreeDeserialization.swift */; };
+		OBJ_125 /* Diagnostic.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Diagnostic.swift */; };
+		OBJ_126 /* DiagnosticConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* DiagnosticConsumer.swift */; };
+		OBJ_127 /* DiagnosticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* DiagnosticEngine.swift */; };
+		OBJ_128 /* JSONDiagnosticConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* JSONDiagnosticConsumer.swift */; };
+		OBJ_129 /* LazyNonThreadSafeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* LazyNonThreadSafeCache.swift */; };
+		OBJ_130 /* PrintingDiagnosticConsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* PrintingDiagnosticConsumer.swift */; };
+		OBJ_131 /* RawSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* RawSyntax.swift */; };
+		OBJ_132 /* SourceLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* SourceLength.swift */; };
+		OBJ_133 /* SourcePresence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* SourcePresence.swift */; };
+		OBJ_134 /* SwiftSyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* SwiftSyntax.swift */; };
+		OBJ_135 /* SwiftcInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* SwiftcInvocation.swift */; };
+		OBJ_136 /* Syntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Syntax.swift */; };
+		OBJ_137 /* SyntaxChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* SyntaxChildren.swift */; };
+		OBJ_138 /* SyntaxData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* SyntaxData.swift */; };
+		OBJ_139 /* WeakLookupTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* WeakLookupTable.swift */; };
+		OBJ_140 /* SyntaxBuilders.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* SyntaxBuilders.swift */; };
+		OBJ_141 /* SyntaxClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* SyntaxClassifier.swift */; };
+		OBJ_142 /* SyntaxCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* SyntaxCollections.swift */; };
+		OBJ_143 /* SyntaxFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* SyntaxFactory.swift */; };
+		OBJ_144 /* SyntaxKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* SyntaxKind.swift */; };
+		OBJ_145 /* SyntaxNodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* SyntaxNodes.swift */; };
+		OBJ_146 /* SyntaxRewriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* SyntaxRewriter.swift */; };
+		OBJ_147 /* TokenKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* TokenKind.swift */; };
+		OBJ_148 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* Trivia.swift */; };
+		OBJ_155 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* Package.swift */; };
+		OBJ_161 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Command.swift */; };
+		OBJ_162 /* CommandInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CommandInterpreter.swift */; };
+		OBJ_163 /* CommandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CommandModel.swift */; };
+		OBJ_164 /* CommandParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* CommandParser.swift */; };
+		OBJ_165 /* Execute.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Execute.swift */; };
+		OBJ_166 /* FirstTokenRewriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* FirstTokenRewriter.swift */; };
+		OBJ_167 /* ImplementWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* ImplementWriter.swift */; };
+		OBJ_168 /* ProtocolDeclSyntax+Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* ProtocolDeclSyntax+Property.swift */; };
+		OBJ_169 /* TriviaPiece+Propert.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* TriviaPiece+Propert.swift */; };
+		OBJ_170 /* VariableDeclSyntax++Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* VariableDeclSyntax++Property.swift */; };
+		OBJ_171 /* CoordinatorTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* CoordinatorTemplate.swift */; };
+		OBJ_172 /* CoordinatorTestsTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* CoordinatorTestsTemplate.swift */; };
+		OBJ_173 /* HeaderTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* HeaderTemplate.swift */; };
+		OBJ_174 /* ModelTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ModelTemplate.swift */; };
+		OBJ_175 /* Template+Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Template+Role.swift */; };
+		OBJ_176 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Template.swift */; };
+		OBJ_177 /* TemplateSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* TemplateSetting.swift */; };
+		OBJ_178 /* ViewControllerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* ViewControllerTemplate.swift */; };
+		OBJ_179 /* ViewModelTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* ViewModelTemplate.swift */; };
+		OBJ_180 /* Usage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Usage.swift */; };
+		OBJ_181 /* CommandLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* CommandLine.swift */; };
+		OBJ_182 /* FileVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* FileVisitor.swift */; };
+		OBJ_183 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* Result.swift */; };
+		OBJ_184 /* String+Capitalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* String+Capitalize.swift */; };
+		OBJ_185 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* main.swift */; };
+		OBJ_187 /* SwiftSyntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */; };
+		OBJ_188 /* ShellOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ShellOut::ShellOut::Product" /* ShellOut.framework */; };
+		OBJ_189 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
+		OBJ_198 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_209 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* XCTestManifests.swift */; };
+		OBJ_210 /* mvvmc_templateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* mvvmc_templateTests.swift */; };
+		OBJ_212 /* SwiftSyntax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */; };
+		OBJ_213 /* ShellOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ShellOut::ShellOut::Product" /* ShellOut.framework */; };
+		OBJ_214 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
+		OBJ_97 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* Files.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFD7D6C6226D552800FA3DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftSyntax::SwiftSyntax";
+			remoteInfo = SwiftSyntax;
+		};
+		FFD7D6C7226D552800FA3DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ShellOut::ShellOut";
+			remoteInfo = ShellOut;
+		};
+		FFD7D6C8226D552800FA3DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Files::Files";
+			remoteInfo = Files;
+		};
+		FFD7D6C9226D552800FA3DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "mvvmc-template::mvvmc-template";
+			remoteInfo = "mvvmc-template";
+		};
+		FFD7D6CA226D552800FA3DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftSyntax::SwiftSyntax";
+			remoteInfo = SwiftSyntax;
+		};
+		FFD7D6CB226D552800FA3DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "ShellOut::ShellOut";
+			remoteInfo = ShellOut;
+		};
+		FFD7D6CC226D552800FA3DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Files::Files";
+			remoteInfo = Files;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"Files::Files::Product" /* Files.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Files.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		OBJ_11 /* CommandInterpreter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandInterpreter.swift; sourceTree = "<group>"; };
+		OBJ_12 /* CommandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandModel.swift; sourceTree = "<group>"; };
+		OBJ_13 /* CommandParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandParser.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Execute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Execute.swift; sourceTree = "<group>"; };
+		OBJ_16 /* FirstTokenRewriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTokenRewriter.swift; sourceTree = "<group>"; };
+		OBJ_17 /* ImplementWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplementWriter.swift; sourceTree = "<group>"; };
+		OBJ_18 /* ProtocolDeclSyntax+Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProtocolDeclSyntax+Property.swift"; sourceTree = "<group>"; };
+		OBJ_19 /* TriviaPiece+Propert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TriviaPiece+Propert.swift"; sourceTree = "<group>"; };
+		OBJ_20 /* VariableDeclSyntax++Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VariableDeclSyntax++Property.swift"; sourceTree = "<group>"; };
+		OBJ_22 /* CoordinatorTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTemplate.swift; sourceTree = "<group>"; };
+		OBJ_23 /* CoordinatorTestsTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTestsTemplate.swift; sourceTree = "<group>"; };
+		OBJ_24 /* HeaderTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTemplate.swift; sourceTree = "<group>"; };
+		OBJ_25 /* ModelTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTemplate.swift; sourceTree = "<group>"; };
+		OBJ_26 /* Template+Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Template+Role.swift"; sourceTree = "<group>"; };
+		OBJ_27 /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
+		OBJ_28 /* TemplateSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateSetting.swift; sourceTree = "<group>"; };
+		OBJ_29 /* ViewControllerTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTemplate.swift; sourceTree = "<group>"; };
+		OBJ_30 /* ViewModelTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTemplate.swift; sourceTree = "<group>"; };
+		OBJ_31 /* Usage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usage.swift; sourceTree = "<group>"; };
+		OBJ_33 /* CommandLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLine.swift; sourceTree = "<group>"; };
+		OBJ_34 /* FileVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileVisitor.swift; sourceTree = "<group>"; };
+		OBJ_35 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		OBJ_36 /* String+Capitalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Capitalize.swift"; sourceTree = "<group>"; };
+		OBJ_37 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		OBJ_40 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_41 /* mvvmc_templateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmc_templateTests.swift; sourceTree = "<group>"; };
+		OBJ_45 /* AbsolutePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsolutePosition.swift; sourceTree = "<group>"; };
+		OBJ_46 /* ByteTreeDeserialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteTreeDeserialization.swift; sourceTree = "<group>"; };
+		OBJ_47 /* Diagnostic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diagnostic.swift; sourceTree = "<group>"; };
+		OBJ_48 /* DiagnosticConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticConsumer.swift; sourceTree = "<group>"; };
+		OBJ_49 /* DiagnosticEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticEngine.swift; sourceTree = "<group>"; };
+		OBJ_50 /* JSONDiagnosticConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDiagnosticConsumer.swift; sourceTree = "<group>"; };
+		OBJ_51 /* LazyNonThreadSafeCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyNonThreadSafeCache.swift; sourceTree = "<group>"; };
+		OBJ_52 /* PrintingDiagnosticConsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintingDiagnosticConsumer.swift; sourceTree = "<group>"; };
+		OBJ_53 /* RawSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawSyntax.swift; sourceTree = "<group>"; };
+		OBJ_54 /* SourceLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLength.swift; sourceTree = "<group>"; };
+		OBJ_55 /* SourcePresence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcePresence.swift; sourceTree = "<group>"; };
+		OBJ_56 /* SwiftSyntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSyntax.swift; sourceTree = "<group>"; };
+		OBJ_57 /* SwiftcInvocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftcInvocation.swift; sourceTree = "<group>"; };
+		OBJ_58 /* Syntax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syntax.swift; sourceTree = "<group>"; };
+		OBJ_59 /* SyntaxChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxChildren.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_60 /* SyntaxData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxData.swift; sourceTree = "<group>"; };
+		OBJ_61 /* WeakLookupTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakLookupTable.swift; sourceTree = "<group>"; };
+		OBJ_63 /* SyntaxBuilders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxBuilders.swift; sourceTree = "<group>"; };
+		OBJ_64 /* SyntaxClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxClassifier.swift; sourceTree = "<group>"; };
+		OBJ_65 /* SyntaxCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxCollections.swift; sourceTree = "<group>"; };
+		OBJ_66 /* SyntaxFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxFactory.swift; sourceTree = "<group>"; };
+		OBJ_67 /* SyntaxKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxKind.swift; sourceTree = "<group>"; };
+		OBJ_68 /* SyntaxNodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxNodes.swift; sourceTree = "<group>"; };
+		OBJ_69 /* SyntaxRewriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxRewriter.swift; sourceTree = "<group>"; };
+		OBJ_70 /* TokenKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenKind.swift; sourceTree = "<group>"; };
+		OBJ_71 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
+		OBJ_73 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/ezura/workspace/lib-prj/pub_mvvmc-template/.build/checkouts/swift-syntax/Package.swift"; sourceTree = "<group>"; };
+		OBJ_75 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/ezura/workspace/lib-prj/pub_mvvmc-template/.build/checkouts/ShellOut/Package.swift"; sourceTree = "<group>"; };
+		OBJ_76 /* ShellOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellOut.swift; sourceTree = "<group>"; };
+		OBJ_78 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/ezura/workspace/lib-prj/pub_mvvmc-template/.build/checkouts/Files/Package.swift"; sourceTree = "<group>"; };
+		OBJ_79 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		OBJ_86 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = SOURCE_ROOT; };
+		OBJ_87 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = SOURCE_ROOT; };
+		OBJ_88 /* MVVMC.xctemplate */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MVVMC.xctemplate; sourceTree = SOURCE_ROOT; };
+		OBJ_89 /* __OUTPUT__Set */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __OUTPUT__Set; sourceTree = SOURCE_ROOT; };
+		OBJ_90 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		OBJ_91 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		"ShellOut::ShellOut::Product" /* ShellOut.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShellOut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftSyntax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"mvvmc-template::mvvmc-template::Product" /* mvvmc-template */ = {isa = PBXFileReference; lastKnownFileType = text; path = "mvvmc-template"; sourceTree = BUILT_PRODUCTS_DIR; };
+		"mvvmc-template::mvvmc-templateTests::Product" /* mvvmc_templateTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; name = mvvmc_templateTests.xctest; path = "mvvmc-templateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_186 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_187 /* SwiftSyntax.framework in Frameworks */,
+				OBJ_188 /* ShellOut.framework in Frameworks */,
+				OBJ_189 /* Files.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_212 /* SwiftSyntax.framework in Frameworks */,
+				OBJ_213 /* ShellOut.framework in Frameworks */,
+				OBJ_214 /* Files.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_15 /* SortImplement */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_16 /* FirstTokenRewriter.swift */,
+				OBJ_17 /* ImplementWriter.swift */,
+				OBJ_18 /* ProtocolDeclSyntax+Property.swift */,
+				OBJ_19 /* TriviaPiece+Propert.swift */,
+				OBJ_20 /* VariableDeclSyntax++Property.swift */,
+			);
+			path = SortImplement;
+			sourceTree = "<group>";
+		};
+		OBJ_21 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* CoordinatorTemplate.swift */,
+				OBJ_23 /* CoordinatorTestsTemplate.swift */,
+				OBJ_24 /* HeaderTemplate.swift */,
+				OBJ_25 /* ModelTemplate.swift */,
+				OBJ_26 /* Template+Role.swift */,
+				OBJ_27 /* Template.swift */,
+				OBJ_28 /* TemplateSetting.swift */,
+				OBJ_29 /* ViewControllerTemplate.swift */,
+				OBJ_30 /* ViewModelTemplate.swift */,
+			);
+			path = Template;
+			sourceTree = "<group>";
+		};
+		OBJ_32 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* CommandLine.swift */,
+				OBJ_34 /* FileVisitor.swift */,
+				OBJ_35 /* Result.swift */,
+				OBJ_36 /* String+Capitalize.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		OBJ_38 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_39 /* mvvmc-templateTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_39 /* mvvmc-templateTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_40 /* XCTestManifests.swift */,
+				OBJ_41 /* mvvmc_templateTests.swift */,
+			);
+			name = "mvvmc-templateTests";
+			path = "Tests/mvvmc-templateTests";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_42 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_43 /* SwiftSyntax 0.50000.0 */,
+				OBJ_74 /* ShellOut */,
+				OBJ_77 /* Files 2.3.0 */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_43 /* SwiftSyntax 0.50000.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_44 /* SwiftSyntax */,
+				OBJ_72 /* lit-test-helper */,
+				OBJ_73 /* Package.swift */,
+			);
+			name = "SwiftSyntax 0.50000.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_44 /* SwiftSyntax */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_45 /* AbsolutePosition.swift */,
+				OBJ_46 /* ByteTreeDeserialization.swift */,
+				OBJ_47 /* Diagnostic.swift */,
+				OBJ_48 /* DiagnosticConsumer.swift */,
+				OBJ_49 /* DiagnosticEngine.swift */,
+				OBJ_50 /* JSONDiagnosticConsumer.swift */,
+				OBJ_51 /* LazyNonThreadSafeCache.swift */,
+				OBJ_52 /* PrintingDiagnosticConsumer.swift */,
+				OBJ_53 /* RawSyntax.swift */,
+				OBJ_54 /* SourceLength.swift */,
+				OBJ_55 /* SourcePresence.swift */,
+				OBJ_56 /* SwiftSyntax.swift */,
+				OBJ_57 /* SwiftcInvocation.swift */,
+				OBJ_58 /* Syntax.swift */,
+				OBJ_59 /* SyntaxChildren.swift */,
+				OBJ_60 /* SyntaxData.swift */,
+				OBJ_61 /* WeakLookupTable.swift */,
+				OBJ_62 /* gyb_generated */,
+			);
+			name = SwiftSyntax;
+			path = ".build/checkouts/swift-syntax/Sources/SwiftSyntax";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_38 /* Tests */,
+				OBJ_42 /* Dependencies */,
+				OBJ_80 /* Products */,
+				OBJ_86 /* images */,
+				OBJ_87 /* Example */,
+				OBJ_88 /* MVVMC.xctemplate */,
+				OBJ_89 /* __OUTPUT__Set */,
+				OBJ_90 /* Makefile */,
+				OBJ_91 /* README.md */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_62 /* gyb_generated */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_63 /* SyntaxBuilders.swift */,
+				OBJ_64 /* SyntaxClassifier.swift */,
+				OBJ_65 /* SyntaxCollections.swift */,
+				OBJ_66 /* SyntaxFactory.swift */,
+				OBJ_67 /* SyntaxKind.swift */,
+				OBJ_68 /* SyntaxNodes.swift */,
+				OBJ_69 /* SyntaxRewriter.swift */,
+				OBJ_70 /* TokenKind.swift */,
+				OBJ_71 /* Trivia.swift */,
+			);
+			path = gyb_generated;
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* mvvmc-template */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_72 /* lit-test-helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "lit-test-helper";
+			path = ".build/checkouts/swift-syntax/Sources/lit-test-helper";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_74 /* ShellOut */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_75 /* Package.swift */,
+				OBJ_76 /* ShellOut.swift */,
+			);
+			name = ShellOut;
+			path = .build/checkouts/ShellOut/Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_77 /* Files 2.3.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_78 /* Package.swift */,
+				OBJ_79 /* Files.swift */,
+			);
+			name = "Files 2.3.0";
+			path = .build/checkouts/Files/Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* mvvmc-template */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Command */,
+				OBJ_15 /* SortImplement */,
+				OBJ_21 /* Template */,
+				OBJ_31 /* Usage.swift */,
+				OBJ_32 /* Util */,
+				OBJ_37 /* main.swift */,
+			);
+			name = "mvvmc-template";
+			path = "Sources/mvvmc-template";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"ShellOut::ShellOut::Product" /* ShellOut.framework */,
+				"mvvmc-template::mvvmc-templateTests::Product" /* mvvmc_templateTests.xctest */,
+				"Files::Files::Product" /* Files.framework */,
+				"mvvmc-template::mvvmc-template::Product" /* mvvmc-template */,
+				"SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_9 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* Command.swift */,
+				OBJ_11 /* CommandInterpreter.swift */,
+				OBJ_12 /* CommandModel.swift */,
+				OBJ_13 /* CommandParser.swift */,
+				OBJ_14 /* Execute.swift */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Files::Files" /* Files */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_93 /* Build configuration list for PBXNativeTarget "Files" */;
+			buildPhases = (
+				OBJ_96 /* Sources */,
+				OBJ_98 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Files;
+			productName = Files;
+			productReference = "Files::Files::Product" /* Files.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Files::SwiftPMPackageDescription" /* FilesPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_100 /* Build configuration list for PBXNativeTarget "FilesPackageDescription" */;
+			buildPhases = (
+				OBJ_103 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FilesPackageDescription;
+			productName = FilesPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"ShellOut::ShellOut" /* ShellOut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_106 /* Build configuration list for PBXNativeTarget "ShellOut" */;
+			buildPhases = (
+				OBJ_109 /* Sources */,
+				OBJ_111 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShellOut;
+			productName = ShellOut;
+			productReference = "ShellOut::ShellOut::Product" /* ShellOut.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"ShellOut::SwiftPMPackageDescription" /* ShellOutPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_113 /* Build configuration list for PBXNativeTarget "ShellOutPackageDescription" */;
+			buildPhases = (
+				OBJ_116 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShellOutPackageDescription;
+			productName = ShellOutPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftSyntax::SwiftPMPackageDescription" /* SwiftSyntaxPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_151 /* Build configuration list for PBXNativeTarget "SwiftSyntaxPackageDescription" */;
+			buildPhases = (
+				OBJ_154 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSyntaxPackageDescription;
+			productName = SwiftSyntaxPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftSyntax::SwiftSyntax" /* SwiftSyntax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_119 /* Build configuration list for PBXNativeTarget "SwiftSyntax" */;
+			buildPhases = (
+				OBJ_122 /* Sources */,
+				OBJ_149 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSyntax;
+			productName = SwiftSyntax;
+			productReference = "SwiftSyntax::SwiftSyntax::Product" /* SwiftSyntax.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"mvvmc-template::SwiftPMPackageDescription" /* mvvmc-templatePackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_194 /* Build configuration list for PBXNativeTarget "mvvmc-templatePackageDescription" */;
+			buildPhases = (
+				OBJ_197 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mvvmc-templatePackageDescription";
+			productName = "mvvmc-templatePackageDescription";
+			productType = "com.apple.product-type.framework";
+		};
+		"mvvmc-template::mvvmc-template" /* mvvmc-template */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_157 /* Build configuration list for PBXNativeTarget "mvvmc-template" */;
+			buildPhases = (
+				OBJ_160 /* Sources */,
+				OBJ_186 /* Frameworks */,
+				FFD7D6CD226D554900FA3DE6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_190 /* PBXTargetDependency */,
+				OBJ_191 /* PBXTargetDependency */,
+				OBJ_192 /* PBXTargetDependency */,
+			);
+			name = "mvvmc-template";
+			productName = mvvmc_template;
+			productReference = "mvvmc-template::mvvmc-template::Product" /* mvvmc-template */;
+			productType = "com.apple.product-type.tool";
+		};
+		"mvvmc-template::mvvmc-templateTests" /* mvvmc-templateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_205 /* Build configuration list for PBXNativeTarget "mvvmc-templateTests" */;
+			buildPhases = (
+				OBJ_208 /* Sources */,
+				OBJ_211 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_215 /* PBXTargetDependency */,
+				OBJ_216 /* PBXTargetDependency */,
+				OBJ_217 /* PBXTargetDependency */,
+				OBJ_218 /* PBXTargetDependency */,
+			);
+			name = "mvvmc-templateTests";
+			productName = mvvmc_templateTests;
+			productReference = "mvvmc-template::mvvmc-templateTests::Product" /* mvvmc_templateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "mvvmc-template" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"Files::Files" /* Files */,
+				"Files::SwiftPMPackageDescription" /* FilesPackageDescription */,
+				"ShellOut::ShellOut" /* ShellOut */,
+				"ShellOut::SwiftPMPackageDescription" /* ShellOutPackageDescription */,
+				"SwiftSyntax::SwiftSyntax" /* SwiftSyntax */,
+				"SwiftSyntax::SwiftPMPackageDescription" /* SwiftSyntaxPackageDescription */,
+				"mvvmc-template::mvvmc-template" /* mvvmc-template */,
+				"mvvmc-template::SwiftPMPackageDescription" /* mvvmc-templatePackageDescription */,
+				"mvvmc-template::mvvmc-templatePackageTests::ProductTarget" /* mvvmc-templatePackageTests */,
+				"mvvmc-template::mvvmc-templateTests" /* mvvmc-templateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FFD7D6CD226D554900FA3DE6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n./.build/x86_64-apple-macosx/debug/mvvmc-template sort-impl ./Example\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_103 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_104 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_109 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_110 /* ShellOut.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_116 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_117 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_122 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_123 /* AbsolutePosition.swift in Sources */,
+				OBJ_124 /* ByteTreeDeserialization.swift in Sources */,
+				OBJ_125 /* Diagnostic.swift in Sources */,
+				OBJ_126 /* DiagnosticConsumer.swift in Sources */,
+				OBJ_127 /* DiagnosticEngine.swift in Sources */,
+				OBJ_128 /* JSONDiagnosticConsumer.swift in Sources */,
+				OBJ_129 /* LazyNonThreadSafeCache.swift in Sources */,
+				OBJ_130 /* PrintingDiagnosticConsumer.swift in Sources */,
+				OBJ_131 /* RawSyntax.swift in Sources */,
+				OBJ_132 /* SourceLength.swift in Sources */,
+				OBJ_133 /* SourcePresence.swift in Sources */,
+				OBJ_134 /* SwiftSyntax.swift in Sources */,
+				OBJ_135 /* SwiftcInvocation.swift in Sources */,
+				OBJ_136 /* Syntax.swift in Sources */,
+				OBJ_137 /* SyntaxChildren.swift in Sources */,
+				OBJ_138 /* SyntaxData.swift in Sources */,
+				OBJ_139 /* WeakLookupTable.swift in Sources */,
+				OBJ_140 /* SyntaxBuilders.swift in Sources */,
+				OBJ_141 /* SyntaxClassifier.swift in Sources */,
+				OBJ_142 /* SyntaxCollections.swift in Sources */,
+				OBJ_143 /* SyntaxFactory.swift in Sources */,
+				OBJ_144 /* SyntaxKind.swift in Sources */,
+				OBJ_145 /* SyntaxNodes.swift in Sources */,
+				OBJ_146 /* SyntaxRewriter.swift in Sources */,
+				OBJ_147 /* TokenKind.swift in Sources */,
+				OBJ_148 /* Trivia.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_154 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_155 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_161 /* Command.swift in Sources */,
+				OBJ_162 /* CommandInterpreter.swift in Sources */,
+				OBJ_163 /* CommandModel.swift in Sources */,
+				OBJ_164 /* CommandParser.swift in Sources */,
+				OBJ_165 /* Execute.swift in Sources */,
+				OBJ_166 /* FirstTokenRewriter.swift in Sources */,
+				OBJ_167 /* ImplementWriter.swift in Sources */,
+				OBJ_168 /* ProtocolDeclSyntax+Property.swift in Sources */,
+				OBJ_169 /* TriviaPiece+Propert.swift in Sources */,
+				OBJ_170 /* VariableDeclSyntax++Property.swift in Sources */,
+				OBJ_171 /* CoordinatorTemplate.swift in Sources */,
+				OBJ_172 /* CoordinatorTestsTemplate.swift in Sources */,
+				OBJ_173 /* HeaderTemplate.swift in Sources */,
+				OBJ_174 /* ModelTemplate.swift in Sources */,
+				OBJ_175 /* Template+Role.swift in Sources */,
+				OBJ_176 /* Template.swift in Sources */,
+				OBJ_177 /* TemplateSetting.swift in Sources */,
+				OBJ_178 /* ViewControllerTemplate.swift in Sources */,
+				OBJ_179 /* ViewModelTemplate.swift in Sources */,
+				OBJ_180 /* Usage.swift in Sources */,
+				OBJ_181 /* CommandLine.swift in Sources */,
+				OBJ_182 /* FileVisitor.swift in Sources */,
+				OBJ_183 /* Result.swift in Sources */,
+				OBJ_184 /* String+Capitalize.swift in Sources */,
+				OBJ_185 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_197 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_198 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_208 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_209 /* XCTestManifests.swift in Sources */,
+				OBJ_210 /* mvvmc_templateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_97 /* Files.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_190 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftSyntax::SwiftSyntax" /* SwiftSyntax */;
+			targetProxy = FFD7D6C6226D552800FA3DE6 /* PBXContainerItemProxy */;
+		};
+		OBJ_191 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ShellOut::ShellOut" /* ShellOut */;
+			targetProxy = FFD7D6C7226D552800FA3DE6 /* PBXContainerItemProxy */;
+		};
+		OBJ_192 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Files::Files" /* Files */;
+			targetProxy = FFD7D6C8226D552800FA3DE6 /* PBXContainerItemProxy */;
+		};
+		OBJ_203 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "mvvmc-template::mvvmc-templateTests" /* mvvmc-templateTests */;
+			targetProxy = "mvvmc-template::mvvmc-templateTests" /* mvvmc-templateTests */;
+		};
+		OBJ_215 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "mvvmc-template::mvvmc-template" /* mvvmc-template */;
+			targetProxy = FFD7D6C9226D552800FA3DE6 /* PBXContainerItemProxy */;
+		};
+		OBJ_216 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftSyntax::SwiftSyntax" /* SwiftSyntax */;
+			targetProxy = FFD7D6CA226D552800FA3DE6 /* PBXContainerItemProxy */;
+		};
+		OBJ_217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ShellOut::ShellOut" /* ShellOut */;
+			targetProxy = FFD7D6CB226D552800FA3DE6 /* PBXContainerItemProxy */;
+		};
+		OBJ_218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Files::Files" /* Files */;
+			targetProxy = FFD7D6CC226D552800FA3DE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_101 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		OBJ_102 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		OBJ_107 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "mvvmc-template.xcodeproj/ShellOut_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ShellOut;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = ShellOut;
+			};
+			name = Debug;
+		};
+		OBJ_108 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "mvvmc-template.xcodeproj/ShellOut_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = ShellOut;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = ShellOut;
+			};
+			name = Release;
+		};
+		OBJ_114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_120 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "mvvmc-template.xcodeproj/SwiftSyntax_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftSyntax;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SwiftSyntax;
+			};
+			name = Debug;
+		};
+		OBJ_121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "mvvmc-template.xcodeproj/SwiftSyntax_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftSyntax;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = SwiftSyntax;
+			};
+			name = Release;
+		};
+		OBJ_152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_158 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "mvvmc-template.xcodeproj/mvvmc_template_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "mvvmc-template";
+			};
+			name = Debug;
+		};
+		OBJ_159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "mvvmc-template.xcodeproj/mvvmc_template_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx @executable_path";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "mvvmc-template";
+			};
+			name = Release;
+		};
+		OBJ_195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_196 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_206 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "mvvmc-template.xcodeproj/mvvmc_templateTests_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "mvvmc-templateTests";
+			};
+			name = Debug;
+		};
+		OBJ_207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "mvvmc-template.xcodeproj/mvvmc_templateTests_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = "mvvmc-templateTests";
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "mvvmc-template.xcodeproj/Files_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Files;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Files;
+			};
+			name = Debug;
+		};
+		OBJ_95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "mvvmc-template.xcodeproj/Files_Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Files;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = Files;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_100 /* Build configuration list for PBXNativeTarget "FilesPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_101 /* Debug */,
+				OBJ_102 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_106 /* Build configuration list for PBXNativeTarget "ShellOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_107 /* Debug */,
+				OBJ_108 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_113 /* Build configuration list for PBXNativeTarget "ShellOutPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_114 /* Debug */,
+				OBJ_115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_119 /* Build configuration list for PBXNativeTarget "SwiftSyntax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_120 /* Debug */,
+				OBJ_121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_151 /* Build configuration list for PBXNativeTarget "SwiftSyntaxPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_152 /* Debug */,
+				OBJ_153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_157 /* Build configuration list for PBXNativeTarget "mvvmc-template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_158 /* Debug */,
+				OBJ_159 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_194 /* Build configuration list for PBXNativeTarget "mvvmc-templatePackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_195 /* Debug */,
+				OBJ_196 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "mvvmc-template" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_200 /* Build configuration list for PBXAggregateTarget "mvvmc-templatePackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_201 /* Debug */,
+				OBJ_202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_205 /* Build configuration list for PBXNativeTarget "mvvmc-templateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_206 /* Debug */,
+				OBJ_207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_93 /* Build configuration list for PBXNativeTarget "Files" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_94 /* Debug */,
+				OBJ_95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
 }

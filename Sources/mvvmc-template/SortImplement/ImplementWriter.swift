@@ -15,6 +15,7 @@ extension ImplementWriter {
         let name: String
         /// store `VariableDeclSyntax` only (Thus ignore `FunctionDeclSyntax`)
         let memberVariables: [String]
+        let position: AbsolutePosition
     }
     
     class InputOutputProtocolVisitor: SyntaxVisitor {
@@ -23,7 +24,8 @@ extension ImplementWriter {
         override func visit(_ node: ProtocolDeclSyntax) -> SyntaxVisitorContinueKind {
             if node.identifier.text.hasSuffix("Inputs") || node.identifier.text.hasSuffix("Outputs") {
                 foundProtocols.append(Interface(name: node.identifier.text,
-                                                memberVariables: node.members.members.compactMap { ($0.decl as? VariableDeclSyntax)?.variableName }))
+                                                memberVariables: node.members.members.compactMap { ($0.decl as? VariableDeclSyntax)?.variableName },
+                                                position: node.identifier.position))
             }
             return .skipChildren
         }
@@ -31,9 +33,11 @@ extension ImplementWriter {
     
     class ImplSectionRewriter: SyntaxRewriter {
         let interfaces: [Interface]
+        let fileURL: URL
         
-        init(interfaces: [Interface]) {
+        init(interfaces: [Interface], fileURL: URL) {
             self.interfaces = interfaces
+            self.fileURL = fileURL
         }
         
         // TODO: StructDeclSyntax
@@ -53,8 +57,10 @@ extension ImplementWriter {
         
         private func grouping(for targetInterface: Interface, in node: ClassDeclSyntax) -> ClassDeclSyntax {
             var sourceMembers = node.members.members
-            var removedMember: [MemberDeclListItemSyntax] = []
+            var interfaceImplMembers: [MemberDeclListItemSyntax] = []
             var sectionHeaderMember: MemberDeclListItemSyntax? = nil
+            var triviaPircesOfSectionComment: [TriviaPiece] = []
+            
             for targetVariableName in targetInterface.memberVariables {
                 guard let index = sourceMembers.firstIndex(where: { 
                     guard let originMember = $0.decl as? VariableDeclSyntax else { return false }
@@ -64,31 +70,25 @@ extension ImplementWriter {
                 }
                 
                 let foundDecl = sourceMembers[index]
-                let hasTargetSectionComment = foundDecl.leadingTrivia?.contains(where: { (piece) -> Bool in
-                    switch piece {
-                    case .spaces,
-                         .tabs,
-                         .verticalTabs,
-                         .formfeeds,
-                         .newlines,
-                         .carriageReturns,
-                         .carriageReturnLineFeeds,
-                         .backticks,
-                         .garbageText:
-                        return false
-                    case .lineComment(let comment),
-                         .blockComment(let comment),
-                         .docLineComment(let comment),
-                         .docBlockComment(let comment):
-                        return comment.contains("MARK: \(targetInterface.name)")
-                    }
+                let sectionCommentIndex = foundDecl.leadingTrivia?.firstIndex(where: { (piece) -> Bool in
+                    return piece.comment?.contains("MARK: - \(targetInterface.name)") == true
                 })
                 
-                if hasTargetSectionComment == true {
+                if let sectionCommentIndex = sectionCommentIndex,
+                    let leadingTrivia = foundDecl.leadingTrivia {
                     sectionHeaderMember = foundDecl
+                    let startTriviasOfDeclIndex = leadingTrivia.dropFirst(sectionCommentIndex + 1)
+                                                                .firstIndex { $0.isNewline }
+                    let triviaPircesOfDecl: [TriviaPiece] = (startTriviasOfDeclIndex != nil) ? Array(leadingTrivia.dropFirst(startTriviasOfDeclIndex! + 1)) : []
+                    triviaPircesOfSectionComment = (startTriviasOfDeclIndex != nil) ? Array(leadingTrivia.prefix(upTo: startTriviasOfDeclIndex!)) : leadingTrivia.map { $0 }
+                    let trimedDecl = FirstTokenRewriter { token in 
+                        token.withLeadingTrivia(Trivia.init(pieces: [.newlines(1)] + triviaPircesOfDecl))
+                        }
+                        .visit(foundDecl) as! MemberDeclListItemSyntax
+                    interfaceImplMembers.append(trimedDecl)
                 } else {
-                    removedMember.append(foundDecl)
                     sourceMembers = sourceMembers.removing(childAt: index)
+                    interfaceImplMembers.append(foundDecl)
                 }
             }
             
@@ -96,11 +96,21 @@ extension ImplementWriter {
                 let sectionHeaderMemberIndex = sourceMembers.firstIndex(where: { 
                     ($0.decl as? VariableDeclSyntax)?.variableName == (_sectionHeaderMember.decl as? VariableDeclSyntax)?.variableName
                 }) else {
-                    print("\(targetInterface.name): Section comment is not found")
+                    print("\(fileURL.path):\(node.positionAfterSkippingLeadingTrivia.line):\(node.positionAfterSkippingLeadingTrivia.column): warning: section comment for `\(targetInterface.name)` is not found")
                     return node
             }
-            let formedMember = removedMember.reversed().reduce(sourceMembers) { (result, member) in
-                result.inserting(member, at: sectionHeaderMemberIndex + 1)
+            
+            // restore section header comment
+            let headDecl = FirstTokenRewriter { (token) -> TokenSyntax in
+                let originLeadingTrivia = token.leadingTrivia.map { $0 }
+                return token.withLeadingTrivia(Trivia.init(pieces: triviaPircesOfSectionComment + originLeadingTrivia))
+                }
+                .visit(interfaceImplMembers.first!) as! MemberDeclListItemSyntax
+            interfaceImplMembers[0] = headDecl
+            
+            sourceMembers = sourceMembers.removing(childAt: sectionHeaderMemberIndex)
+            let formedMember = interfaceImplMembers.reversed().reduce(sourceMembers) { (result, member) in
+                result.inserting(member, at: sectionHeaderMemberIndex)
             }
             let block = node.members.withMembers(formedMember)
             return node.withMembers(block)
@@ -108,14 +118,16 @@ extension ImplementWriter {
     }
 }
 
-class ImplementWriter: SyntaxRewriter {
+class ImplementWriter {
     
-    func grouping(fileURL: URL) {
+    func sort(fileURL: URL) {
         let syntaxTree = try! SyntaxTreeParser.parse(fileURL)
         let protocolCollector = InputOutputProtocolVisitor()
         syntaxTree.walk(protocolCollector)
         
-        let rewriter = ImplSectionRewriter(interfaces: protocolCollector.foundProtocols)
-        print(rewriter.visit(syntaxTree).description)
+        let rewriter = ImplSectionRewriter(interfaces: protocolCollector.foundProtocols, fileURL: fileURL)
+        let formedTree = rewriter.visit(syntaxTree)
+        try! formedTree.description
+            .write(to: fileURL, atomically: false, encoding: .utf8)
     }
 }

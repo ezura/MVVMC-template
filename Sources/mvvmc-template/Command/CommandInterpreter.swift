@@ -22,11 +22,11 @@ final class CommandInterpreter {
         case "generate":
             let name = input.args.first
             return .success(.generate(name: name, options: input.options))
-        case "sync-implement", "sync-impl":
+        case "sort-implement", "sort-impl":
             guard let filePath = input.args.first else {
                 return .failure(.argumentMissing(message: "need file URL"))
             }
-            return .success(.printImplement(filePath: filePath))
+            return .success(.sortImpl(path: filePath))
         default:
             return .failure(.commandMissing)
         }
