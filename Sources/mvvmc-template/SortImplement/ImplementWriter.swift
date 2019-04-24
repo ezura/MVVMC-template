@@ -79,10 +79,10 @@ extension ImplementWriter {
                     sectionHeaderMember = foundDecl
                     let startTriviasOfDeclIndex = leadingTrivia.dropFirst(sectionCommentIndex + 1)
                                                                 .firstIndex { $0.isNewline }
-                    let triviaPircesOfDecl: [TriviaPiece] = (startTriviasOfDeclIndex != nil) ? Array(leadingTrivia.dropFirst(startTriviasOfDeclIndex! + 1)) : []
+                    let triviaPiecesOfDecl: [TriviaPiece] = (startTriviasOfDeclIndex != nil) ? Array(leadingTrivia.dropFirst(startTriviasOfDeclIndex! + 1)) : []
                     triviaPircesOfSectionComment = (startTriviasOfDeclIndex != nil) ? Array(leadingTrivia.prefix(upTo: startTriviasOfDeclIndex!)) : leadingTrivia.map { $0 }
                     let trimedDecl = FirstTokenRewriter { token in 
-                        token.withLeadingTrivia(Trivia.init(pieces: [.newlines(1)] + triviaPircesOfDecl))
+                        token.withLeadingTrivia(Trivia.init(pieces: [.newlines(1)] + triviaPiecesOfDecl))
                         }
                         .visit(foundDecl) as! MemberDeclListItemSyntax
                     interfaceImplMembers.append(trimedDecl)
